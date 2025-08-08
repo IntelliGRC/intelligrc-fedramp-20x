@@ -1,5 +1,5 @@
 IntelliGRC is pleased to present our final submission for the **FedRAMP 20x Phase One** pilot. 
-This submission builds upon our earlier work and reflects our dedication to supporting the PMO’s vision 
+This submission is meant to reflect our dedication to supporting our vision 
 for faster, more transparent, and scalable compliance authorizations.
 
 ---

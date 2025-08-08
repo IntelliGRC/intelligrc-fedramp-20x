@@ -1,0 +1,2802 @@
+{
+  "framework": "FedRAMP",
+  "metadata": {
+    "hash": {
+      "algorithm": "SHA-256",
+      "value": "E921E0FA15DD336B077682D6783F246DF32D790385B94E1831B9FECFDC965045"
+    },
+    "cloudServiceProviderInformation": {
+      "providerName": "IntelliGRC, Inc.",
+      "providerDescription": "IntelliGRC is a multi-tenant SaaS Cybersecurity Governance, Risk Management, and Compliance (GRC) platform purpose-built to catalyze unparalleled cybersecurity compliance at scale for service providers and regulated enterprises—Transforming audit-readiness, supercharging provider profitability, and optimizing regulatory excellence.",
+      "serviceOffering": "IntelliGRC",
+      "deploymentEnvironment": "Azure Commercial US-EAST, US-WEST",
+      "submissionDate": "08/08/2025",
+      "submissionVersion": "1.0"
+    },
+    "submissionDate": "2025-08-08",
+    "submissionVersion": "1.0"
+  },
+  "families": [
+    {
+      "familyID": "CED",
+      "familyName": "Cybersecurity Education",
+      "controls": [
+        {
+          "id": "CED-01",
+          "description": "Ensure all employees receive security awareness training",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC provides security awareness training to all employees during initial onboarding and at least annually thereafter. Significant changes or events also triggers retraining to all personnel. Security awareness training includes content on general security best practices, insider threats, social engineering, phishing, etc. Records of completion are retained for at least one year.",
+          "evidence": [
+            {
+              "id": "57ad70fd-4b70-441d-89be-bcbe63fac948",
+              "name": "CED-01-Cybersecurity Education Training Records.png",
+              "collectedDate": "2025-08-08T18:11:52.544289",
+              "description": "Screenshots of the Awareness and Training policy supporting the implementation statement",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "013b817d-9a49-4a16-9e8f-30a5a26d0d85",
+              "name": "CED-01-Cybersecurity Education Annual Training.png",
+              "collectedDate": "2025-08-08T18:11:52.544405",
+              "description": "Screenshots of the Awareness and Training policy supporting the implementation statement",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "0fc78002-7bec-4cc6-acff-1d3c699c9d19",
+              "name": "CED-01-Cybersecurity Education Insider Threat.png",
+              "collectedDate": "2025-08-08T18:11:52.544488",
+              "description": "Screenshots of the Awareness and Training policy supporting the implementation statement",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "d9744514-7800-4e89-b432-95dc716c0aff",
+              "name": "CED-01-Q3 2025 Training report (July 2025).csv",
+              "collectedDate": "2025-08-08T18:11:52.544564",
+              "description": "Training completion report",
+              "source": "M365 Defender Admin portal",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "4172df67-6380-4837-83cc-70189fdac42c",
+              "name": "CED-01-Annual Security and Awareness Training v2025-08.csv",
+              "collectedDate": "2025-08-08T18:11:52.544628",
+              "description": "Training report",
+              "source": "M365 Defender Admin portal",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CED-02",
+          "description": "Require role-specific training for high risk roles, including at least roles with privileged access",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC provides role-based training to all personnel with elevated priviliges and compliance responsibilities. This includes but is not limited to system administrators, developers, and cloud operations personnel. Role-based training is assigned prior to gaining system access or performing assigned duties and annually thereafter. Training completion is tracked and records are retained for at least one year.",
+          "evidence": [
+            {
+              "id": "57908347-9e49-4f2b-9d70-ea1c351a573a",
+              "name": "CED-02 Cybersecurity Education Role Based Training.png",
+              "collectedDate": "2025-08-08T18:11:52.544816",
+              "description": "Screenshot of training requirements for users with elevated privileges",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "cf71aadf-a4f8-4f62-9b78-d36e2b0ec0dd",
+              "name": "CED-01-Annual Security and Awareness Training v2025-08.csv",
+              "collectedDate": "2025-08-08T18:11:52.544882",
+              "description": "Screenshot of training requirements for users with elevated privileges",
+              "source": "M365 Defender Admin portal",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "62ccdb3e-2815-4a94-afe9-a2cc542c8dad",
+              "name": "CED-02-Awareness_Training_Slides",
+              "collectedDate": "2025-08-08T18:11:52.544964",
+              "description": "Screenshot of training requirements for users with elevated privileges",
+              "source": "Awareness and Training powerpoint",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        }
+      ]
+    },
+    {
+      "familyID": "CMT",
+      "familyName": "Change Management",
+      "controls": [
+        {
+          "id": "CMT-01",
+          "description": "Log and monitor system modifications",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC logs and monitors system modifications across its environment using centralized logging, automated alerting, and audit review procedures. These activities are carried out by the Security and CloudOps Teams.\nAll configuration changes, software deployments, and administrative activities, whether performed through CI/CD pipelines, infrastructure-as-code tools, or manual system management, are logged.",
+          "evidence": [
+            {
+              "id": "432618ea-d586-4854-95b7-2a274f351ccc",
+              "name": "CMT-01-Pull Requests change history.png",
+              "collectedDate": "2025-08-08T18:11:52.546168",
+              "description": "Screenshot of Azure Devops pull requests, Screenshot of Kusto Explorer and querying specific audit logs, Excerpt of the Audit and Accountability procedure",
+              "source": "Azure Devops",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "01110b45-fe4f-426d-9bd4-ffa2a04c41f5",
+              "name": "CMT-01-Sentinel Logs - System Modifications.png",
+              "collectedDate": "2025-08-08T18:11:52.546240",
+              "description": "Screenshot of Kusto Explorer and querying specific audit logs",
+              "source": "MS Sentinel and Kusto Explorer",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "aff495aa-7f43-4196-9e73-d34a117aaf54",
+              "name": "CMT-01-Event Logging Policy Excert.png",
+              "collectedDate": "2025-08-08T18:11:52.546298",
+              "description": "Excerpt of the Audit and Accountability procedure",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CMT-02",
+          "description": "Execute changes through redeployment of version controlled immutable resources rather than direct modification wherever possible",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC executes infrastructure and application changes through the redeployment of version-controlled, immutable resources rather than direct modification wherever possible. Infrastructure is provisioned and managed using Terraform, ensuring all configurations are declarative and tracked in source control. Application deployments are managed via Helm charts and orchestrated with ArgoCD, enabling automated, consistent, and auditable rollouts. This approach enforces immutability, provides a clear change history, and reduces the risk associated with manual or ad hoc modifications in the production environment.",
+          "evidence": [
+            {
+              "id": "b1f23657-fb66-46bb-9e49-262bb5fb0bc0",
+              "name": "CNA-04-alz-mgmt terraform configuration identities.tf.png",
+              "collectedDate": "2025-08-08T18:11:52.546438",
+              "description": "alz-mgmt terraform configuration identities.tf.png shows an example terraform file configuring managed identities in the connectivity subscription. ",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6eed8fea-0837-4b07-a71f-4eaa558f2eca",
+              "name": "CMT-02-intelli-appset.yml.txt",
+              "collectedDate": "2025-08-08T18:11:52.546491",
+              "description": "intelli-appset.yml is our ArgoCD gitops configuration file for deploying intelligrc application services using helm templating",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CMT-03",
+          "description": "Implement automated testing and validation of changes prior to deployment",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC implements automated testing and validation processes for all changes prior to deployment into the production environment. These processes are integrated into the CI/CD pipeline and are aligned with FedRAMP Moderate controls to ensure the integrity and security of software and infrastructure updates. System patches are are tested in staging environments before promotion to production. Unit tests, integration tests, automated testing, and code analysis are performed during the build and release stages.",
+          "evidence": [
+            {
+              "id": "7d2387b7-257f-4897-8543-15a90cd534f6",
+              "name": "CMT-03-Testing&Validation of Change .png",
+              "collectedDate": "2025-08-08T18:11:52.546631",
+              "description": "Configuration Management Policy screenshot",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "89e368e3-cd7f-456a-bcf7-a3dbc579907c",
+              "name": "CMT-03-Automated tests run.png",
+              "collectedDate": "2025-08-08T18:11:52.546685",
+              "description": "Screenshot of Devops Automated Unit Testing at 100%",
+              "source": "Azure Devops",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "8b8f5450-d19c-4882-b334-b7d0baca5cd3",
+              "name": "CMT-03-Code Scanning Logs.txt",
+              "collectedDate": "2025-08-08T18:11:52.546738",
+              "description": "Code scanning log from a kql pipeline",
+              "source": "Azure Devops",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6cd37d63-2228-4259-b295-9bf86f5ce2f4",
+              "name": "CNA-04-message-scheduler-v0.1.3-results.xml",
+              "collectedDate": "2025-08-08T18:11:52.546784",
+              "description": "DISA STIG Scan Results for the IntelliGRC Message Scheduler Microservice",
+              "source": "Azure Devops",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CMT-04",
+          "description": "Have a documented change management procedure",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC maintains a documented change management procedure that governs how changes to production systems, code, infrastructure, and configurations are proposed, reviewed, tested, approved, and deployed within the environment. This procedure ensures that all changes are controlled, traceable, and do not introduce unapproved risk into the environment.",
+          "evidence": [
+            {
+              "id": "68914123-cbc1-4dec-a73e-2fcb196837c6",
+              "name": "CMT-05-CM Plan.pdf",
+              "collectedDate": "2025-08-08T18:11:52.546897",
+              "description": "Configuration Management Plan",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "442f6f6b-1915-404e-8dc0-9b47f32e1d1d",
+              "name": "CMT-05- CM - Configuration Management.pdf",
+              "collectedDate": "2025-08-08T18:11:52.547048",
+              "description": "Configuration Management Policy",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CMT-05",
+          "description": "Evaluate the risk and potential impact of any change",
+          "implementationStatus": true,
+          "implementationStatement": "The IntelliGRC Security Team monitors system changes as part of both the change management and ConMon programs. Configuration changes, software deployments, or architectural modifications are reviewed for potential impacts. Changes are assessed under FedRAMP guidance (NIST SP 800-37 Rev. 2, App F) and evaluated for impact on control effectiveness. Resulting risks are tracked and monitored.",
+          "evidence": [
+            {
+              "id": "af31400a-affb-46a9-a139-e0508e3bbf24",
+              "name": "CMT-05 Change Management Impact Analysis.png",
+              "collectedDate": "2025-08-08T18:11:52.547280",
+              "description": "Screenshot of Configuration Management Policy section CM-4",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "5a21ef91-260c-472c-8417-a701c44d587b",
+              "name": "CMT-05 Change Mangement Teams Sentinel Change Approval.pdf",
+              "collectedDate": "2025-08-08T18:11:52.547349",
+              "description": "Screenshot of Teams Approval chain",
+              "source": "Change Management process",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        }
+      ]
+    },
+    {
+      "familyID": "CNA",
+      "familyName": "Cloud Native Architecture",
+      "controls": [
+        {
+          "id": "CNA-01",
+          "description": "Configure ALL information resources to limit inbound and outbound traffic",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC enforces strict controls on network traffic through layered Azure security services. Azure Web Application Firewall (WAF) manages inbound web traffic, while administrative access is restricted via an Azure Bastion host secured with Network Security Groups (NSGs) and Entra ID RBAC. All outbound traffic is routed through Azure Firewall configured with least-privilege rules. All subnets have their own NSG with default deny, allow by exception rules.",
+          "evidence": [
+            {
+              "id": "24f45a37-102a-4124-8d1f-860e79cfd5ee",
+              "name": "CNA-01-jumpbox-fw.tf",
+              "collectedDate": "2025-08-08T18:11:52.548684",
+              "description": "Configures firewall rules for Azure Bastion to secure jumpbox access, ensuring least-privilege inbound and outbound traffic for administrative management.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "7a7e715a-820e-4228-a9dc-d5cc5cad5697",
+              "name": "CNA-01-build-agents-fw.tf",
+              "collectedDate": "2025-08-08T18:11:52.548790",
+              "description": "Implements firewall settings for secure communication between build agents, enforcing network traffic controls through least-privilege rules.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "e8ebb40e-6cd6-4c89-b4b4-c8dea3239364",
+              "name": "CNA-01-aks-fw.tf",
+              "collectedDate": "2025-08-08T18:11:52.548849",
+              "description": "Configures firewall rules for Azure Kubernetes Service (AKS), controlling network traffic to ensure security between containers and microservices within the environment.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "23601f1a-da27-43f5-b2d7-00e635f0293d",
+              "name": "CNA-01-acr-nw.tf",
+              "collectedDate": "2025-08-08T18:11:52.548901",
+              "description": "Sets network rules for Azure Container Registry (ACR) to secure communication with other services while enforcing strict traffic flow policies.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "cefa7c83-76f6-4512-9ba5-bbe3b0d7834c",
+              "name": "CNA-01-jumpbox-nw.tf",
+              "collectedDate": "2025-08-08T18:11:52.548948",
+              "description": " Defines network settings for the jumpbox, including the enforcement of NSGs and private access management to ensure secure administrative operations.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "d54af318-ef27-4246-a3eb-35c92a535da1",
+              "name": "CNA-01-firewall.tf",
+              "collectedDate": "2025-08-08T18:11:52.548996",
+              "description": " Implements Azure Firewall with least-privilege rules to manage outbound traffic, controlling data flow to external networks while ensuring compliance.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "0c3bdd34-fab8-4da8-9c87-6a278707244a",
+              "name": "CNA-01-bastion.tf",
+              "collectedDate": "2025-08-08T18:11:52.549043",
+              "description": "Configures Azure Bastion for secure administrative access, enforcing access control policies and protecting management interfaces.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "f760f065-4982-4547-bf96-7f4e819e3cff",
+              "name": "CNA-01-openai.tf",
+              "collectedDate": "2025-08-08T18:11:52.549087",
+              "description": "Ensures secure integration of OpenAI services with traffic control policies through the use of Azure's security tools and least-privilege access principles.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CNA-02",
+          "description": "Design systems to minimize the attack surface and minimize lateral movement if compromised",
+          "implementationStatus": true,
+          "implementationStatement": "The IntelliGRC SaaS environment uses a microservices architecture deployed via hardened Docker containers running in Azure Kubernetes Service (AKS). Core application services are logically grouped, while third-party and supporting components are isolated to minimize risk and maintain separation of duties. Service-to-service communication is tightly controlled using Linkerd network policies, with a default deny posture and explicit allow rules for only required connections.\nBeyond Kubernetes, network segmentation is enforced at the Azure VNet level using dedicated subnets for different workloads. Network Security Groups (NSGs) are configured with a default deny-all rule, allowing traffic between subnets strictly by exception. This approach helps prevent unauthorized lateral movement between network segments. Additional isolation and access controls are provided through Azure Privileged Identity Management (PIM) and Just-in-Time (JIT) access policies, which limit administrative exposure and reduce the overall attack surface. Secure, auditable access from the Azure Bastion Service is enforced through Entra ID RBAC, further mitigating risks associated with lateral movement from bastion hosts.",
+          "evidence": [
+            {
+              "id": "af03fc92-77ed-4ef3-aaf8-d83590ca0806",
+              "name": "CNA-02-app-allowedservices.yaml",
+              "collectedDate": "2025-08-08T18:11:52.549243",
+              "description": "Defines allowed service communication policies within the microservices architecture, ensuring only necessary connections are permitted by Linkerd network policies with a default deny posture.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3c2f377b-8faa-4c75-9f6c-db2e5b930357",
+              "name": "CNA-02-authorizationpolicy.yaml",
+              "collectedDate": "2025-08-08T18:11:52.549293",
+              "description": "Configures authorization policies to enforce least-privilege access and service isolation within the SaaS environment, supporting role-based access control and minimizing unauthorized access.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "8759f0df-976f-48ea-878a-6a20142336df",
+              "name": "CNA-02-log-analytics.yaml",
+              "collectedDate": "2025-08-08T18:11:52.549339",
+              "description": "Implements logging and monitoring configuration for auditability and visibility of network traffic and system access, supporting compliance with security policies and enabling quick identification of potential breaches.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "8e4f5615-096e-4702-8e88-1fcb3e0216a9",
+              "name": "CNA-02-meshauthentication.yaml",
+              "collectedDate": "2025-08-08T18:11:52.549383",
+              "description": "Enforces mesh-level authentication policies between microservices, ensuring secure and authenticated service-to-service communication within the Azure Kubernetes environment.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "7aaa6b2b-1837-4933-a828-1c7941c3698c",
+              "name": "CNA-02-server.yaml",
+              "collectedDate": "2025-08-08T18:11:52.549426",
+              "description": "Configures server-level policies for securing microservices and enforcing best practices for network segmentation and firewall rules, ensuring a strong defense against lateral movement.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "e8c5ce55-5ff2-4914-aae8-d926f81b38c3",
+              "name": "CNA-02-values.yaml",
+              "collectedDate": "2025-08-08T18:11:52.549470",
+              "description": "Configures environment-specific values for the SaaS microservices architecture, supporting network segmentation, and ensuring secure communication policies within Azure Kubernetes and VNets.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CNA-03",
+          "description": "Use logical networking and related capabilities to enforce traffic flow controls",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC implements Azure Virtual Networks with clearly defined logical network segmentation using VNets, subnets, and NSGs, configured via Infrastructure as Code (Terraform). Traffic between Kubernetes services is restricted and managed through Linkerd network policies. Azure Managed Firewall enforces explicit rulesets for outbound traffic flow with all traffic directed via UDR (user defined routing).",
+          "evidence": [
+            {
+              "id": "83fcd19b-dfa6-4687-8206-ace280968e00",
+              "name": "CNA-03-acr-nw.tf",
+              "collectedDate": "2025-08-08T18:11:52.549581",
+              "description": "Configures network rules for Azure Container Registry (ACR) to secure inbound and outbound traffic, enforcing segmentation within the VNet and allowing access only by exception through NSG rules.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6ccf2e82-ff7b-49e8-9b7b-7dbc164e36e1",
+              "name": "CNA-03-aks-fw.tf",
+              "collectedDate": "2025-08-08T18:11:52.549628",
+              "description": " Implements firewall rules for Azure Kubernetes Service (AKS), controlling traffic between pods and services with strict segmentation and access policies based on least-privilege principles.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "83eefbc5-ffeb-4e31-b414-cfe0632f7d3b",
+              "name": "CNA-03-bastion.tf",
+              "collectedDate": "2025-08-08T18:11:52.549674",
+              "description": "Defines configurations for Azure Bastion, enabling secure administrative access while enforcing RBAC and minimizing the attack surface through least-privilege and time-limited access policies.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "454c1cb3-a70a-4011-8523-48bab34ddaa1",
+              "name": "CNA-03-build-agents-fw.tf",
+              "collectedDate": "2025-08-08T18:11:52.549717",
+              "description": "Configures firewall rules to control communication between build agents and other services, enforcing access control to ensure secure service interactions within the network.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "7c819a62-c9bb-48b7-899c-d2cbdda30d7c",
+              "name": "CNA-03-firewall.tf",
+              "collectedDate": "2025-08-08T18:11:52.549760",
+              "description": "Sets up Azure Firewall policies to manage outbound traffic, ensuring all communication is routed through user-defined routing (UDR) with explicit allow rules for necessary services.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "73e410da-1c57-4b45-ad31-5c39dec85b61",
+              "name": "CNA-03-jumpbox-fw.tf",
+              "collectedDate": "2025-08-08T18:11:52.549802",
+              "description": "Implements firewall settings for jumpbox access, securing administrative paths and ensuring only authorized traffic is allowed, consistent with Azure security best practices.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3a1893ad-4c7e-4890-8db0-193b1f510e24",
+              "name": "CNA-03-jumpbox-nw.tf",
+              "collectedDate": "2025-08-08T18:11:52.549845",
+              "description": " Configures network segmentation for the jumpbox, enforcing security policies that prevent lateral movement while restricting traffic to only essential connections.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "5d52ef57-d7f5-43f2-9062-d6615e7e231d",
+              "name": "CNA-03-openai.tf",
+              "collectedDate": "2025-08-08T18:11:52.549889",
+              "description": "Configures secure communication for OpenAI integration, ensuring it adheres to network segmentation and access control policies enforced via Azure’s managed firewall and NSGs.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CNA-04",
+          "description": "Use immutable infrastructure with strictly defined functionality and privileges by default",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC leverages Terraform for Infrastructure as Code (IaC), ensuring deployments and configuration changes are immutable, auditable, and strictly version-controlled. Docker containers are built with immutable images, hardened and deployed to AKS with minimal functionality according to FedRAMP Moderate baselines. Azure RBAC and Entra ID Managed Identities enforce minimal privileges by default, preventing unauthorized changes or functional drift.",
+          "evidence": [
+            {
+              "id": "f68b961c-fd89-468b-8a6e-60bd53f35b5a",
+              "name": "CNA-04-alz-mgmt terraform configuration identities.tf.png",
+              "collectedDate": "2025-08-08T18:11:52.549997",
+              "description": "Provides a visual representation of identity management configurations within the Azure Landing Zone (ALZ) environment, ensuring secure identity governance and enforcing the principle of least privilege via managed identities.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "107f3538-b70c-49c6-ab6f-8c40fc38aba3",
+              "name": "CNA-04-Entra ID - App registration - intelli-prod-fr-appconfig.png",
+              "collectedDate": "2025-08-08T18:11:52.550048",
+              "description": "Entra ID - App registration - intelli-prod-fr-appconfig shows the actual identity in the portal. ",
+              "source": "Entra ID",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6f298361-b6fe-4b78-b3ad-7b8516c35c38",
+              "name": "CNA-04-Entra ID Group - Azure App Config Read Only (Prod).png",
+              "collectedDate": "2025-08-08T18:11:52.550099",
+              "description": "Entra ID - App registration configuration in the portal.",
+              "source": "Entra ID",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "68f05eee-d1cf-49f2-8db6-06c2846203d2",
+              "name": "CNA-04-message-scheduler-v0.1.3-results.xml",
+              "collectedDate": "2025-08-08T18:11:52.550149",
+              "description": "message-scheduler-v0.1.3-results.xml shows a scap scan of the given version of the message scheduler service.  ",
+              "source": "Azure DevOps Repository, Entra ID, Devops reports",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6f69e86b-82f0-4323-b51e-0c535449b04a",
+              "name": "CNA-04-values.yaml",
+              "collectedDate": "2025-08-08T18:11:52.550199",
+              "description": "Defines environment-specific values for the deployment of immutable Docker containers and configurations, supporting infrastructure version control and compliance with FedRAMP Moderate baselines.",
+              "source": "Azure DevOps Repository, Entra ID, Devops reports",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CNA-05",
+          "description": "Have denial of service protection",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC leverages Azure Front Door as the global entry point for web traffic, providing integrated protection at both the network and application layers. Azure Front Door works with DDoS Protection Standard to automatically detect, analyze, and mitigate distributed denial-of-service (DDoS) attacks, helping to ensure service availability and resilience.\nAdditionally, Azure Web Application Firewall (WAF) is enabled to defend against common web application threats. The WAF managed rule set protects against attacks such as SQL injection and cross-site scripting (XSS), while custom rules enable blocking or redirecting based on geographic region, IP address, or traffic patterns. Rate limiting is applied to prevent abuse, and bot protection rules guard against known malicious bots.",
+          "evidence": [
+            {
+              "id": "82c164f8-8dcf-4abe-966a-a5bbc23b9223",
+              "name": "CNA-05-AzureFrontDoorWAF.tf",
+              "collectedDate": "2025-08-08T18:11:52.550311",
+              "description": "Configures Azure Front Door and Web Application Firewall (WAF) to protect against network and application-layer attacks, including DDoS protection and common web vulnerabilities, enhancing service resilience and availability.",
+              "source": "Azure DevOps Repository, Microsoft Learn",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "d29380ce-8bdd-46c3-8f74-5a8a4a643e78",
+              "name": "CNA-05-AzureFirewall.tf",
+              "collectedDate": "2025-08-08T18:11:52.550364",
+              "description": "Configures Azure Firewall to enforce network traffic rules, ensuring controlled inbound and outbound traffic flow, protecting against unauthorized access while adhering to security policies.",
+              "source": "Azure DevOps Repository, Microsoft Learn",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "e3f34dcf-9a9c-45c8-8691-1a47d50286d8",
+              "name": "CNA-05-azure-frontdoor.pdf",
+              "collectedDate": "2025-08-08T18:11:52.550415",
+              "description": "Microsoft's Azure Front Door documentation",
+              "source": "Microsoft Learn",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "a5d282d7-f9b7-4986-8e26-8aef68394d0a",
+              "name": "CNA-05-AzureBuildAgents_FirewallRules.tf",
+              "collectedDate": "2025-08-08T18:11:52.550465",
+              "description": "Sets up firewall rules for build agents to secure communications, ensuring traffic is appropriately filtered and only necessary connections are allowed within the environment.",
+              "source": "Azure DevOps Repository, Microsoft Learn",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "ce93dd5f-b204-4098-b81d-33886e145419",
+              "name": "CNA-05-AzureBastion_Jumpbox_FirewallRules.tf",
+              "collectedDate": "2025-08-08T18:11:52.550515",
+              "description": "Configures firewall rules for the Azure Bastion and jumpbox, enabling secure administrative access while ensuring that access controls are strictly enforced with minimal exposure.",
+              "source": "Azure DevOps Repository, Microsoft Learn",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "f121797f-d229-4051-8a65-2e3b53e6a33e",
+              "name": "CNA-05-AzureFirewall_PremiumFWPolicy_IDS.tf",
+              "collectedDate": "2025-08-08T18:11:52.550564",
+              "description": " Implements Azure Firewall Premium policies with intrusion detection and prevention features, securing the environment against sophisticated threats and unauthorized access attempts.",
+              "source": "Azure DevOps Repository, Microsoft Learn",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "5f658bc2-659b-4878-a047-785df3e3da06",
+              "name": "CNA-05-AzureFirewall_SubnetZoneVariables.tf",
+              "collectedDate": "2025-08-08T18:11:52.550613",
+              "description": " Defines subnet and zone variables for Azure Firewall configurations, ensuring that network traffic is properly segmented and access is controlled at the subnet level within the VNet.",
+              "source": "Azure DevOps Repository, Microsoft Learn",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "e345cf74-dd54-4193-8d5f-4b6c278bd946",
+              "name": "CNA-05-AzureKubenetesService_FirewallRules.tf",
+              "collectedDate": "2025-08-08T18:11:52.550662",
+              "description": " Configures firewall rules for Azure Kubernetes Service (AKS), ensuring secure traffic flow between services and protecting workloads with a tightly controlled network security policy",
+              "source": "Azure DevOps Repository, Microsoft Learn",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CNA-06",
+          "description": "Design systems for high availability and rapid recovery",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC is architected for high availability and rapid recovery through a geographically redundant Azure infrastructure deployed across multiple availability zones within the East US region. Azure Kubernetes Service (AKS) worker nodes are distributed across these zones to ensure that workloads remain available in the event of a zone failure. Pod Disruption Budgets (PDBs) are implemented to maintain minimum service levels during planned or unplanned disruptions, preventing simultaneous evictions that could impact application availability. Backup and restoration capabilities are provided via Azure Blob Storage snapshots and regular database backups, in alignment with a Recovery Time Objective (RTO) of 24 hours and a Recovery Point Objective (RPO) of 8 hours. All backup and recovery procedures are fully tested annually and audited as part of FedRAMP compliance.",
+          "evidence": [
+            {
+              "id": "4177c77e-90ca-4c53-9e51-2474651aa3fc",
+              "name": "CNA-06-aks.tf",
+              "collectedDate": "2025-08-08T18:11:52.550806",
+              "description": "Defines infrastructure for Azure Kubernetes Service (AKS), ensuring high availability and fault tolerance through distribution across availability zones, with Pod Disruption Budgets (PDBs) to maintain service continuity during disruptions.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "e185ff7e-c25c-4ba9-a138-6674e12ddf13",
+              "name": "CNA-06-backup-vault.tf",
+              "collectedDate": "2025-08-08T18:11:52.550863",
+              "description": "Configures backup vaults for Azure Blob Storage, ensuring secure and reliable data backup and recovery in alignment with the organization's RTO and RPO requirements, supporting disaster recovery procedures.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "14776733-1d67-4bf3-923d-0597a2b25c63",
+              "name": "CNA-06-blob-storage.tf",
+              "collectedDate": "2025-08-08T18:11:52.550913",
+              "description": "Configures Azure Blob Storage for data storage and backup, ensuring resilience and compliance with the organization's backup policies, including regular snapshots and database backups",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "CNA-07",
+          "description": "Ensure cloud-native information resources are implemented based on host provider's best practices and documented guidance",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC infrastructure and services are designed, deployed, and maintained in strict adherence to Microsoft Azure's best practices and documented guidance, specifically aligning to the Azure Landing Zone Architecture and FedRAMP Moderate baselines. All Azure resources utilized by IntelliGRC are FedRAMP Authorized. Regular reviews and updates to alignment are conducted quarterly or in response to significant changes in Azure best practice guidance.",
+          "evidence": [
+            {
+              "id": "27394c23-63d4-4b41-a925-94626198e765",
+              "name": "CNA-07-intelligrc_landing_zones.drawio.png",
+              "collectedDate": "2025-08-08T18:11:52.551026",
+              "description": "Azure environment diagram, Terraform Azure LAnding Zone documentation, JSON configu for Azure Policy - FedRAMP, Firewall and Landing Zone configuration",
+              "source": "Azure Devops Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "ddb73953-fe84-4bc8-95fd-fad4beb20609",
+              "name": "CNA-07-main.tf",
+              "collectedDate": "2025-08-08T18:11:52.551081",
+              "description": " Implements the main Terraform configuration for IntelliGRC's infrastructure, adhering to Azure Landing Zone Architecture best practices and ensuring compliance with FedRAMP Moderate baselines.",
+              "source": "Internal documentation, Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "5b6e7673-ee7b-490c-b665-0f003ff819fd",
+              "name": "CNA-07-policy_assignment_fedramp_moderate.json",
+              "collectedDate": "2025-08-08T18:11:52.551132",
+              "description": " Defines policy assignments for FedRAMP Moderate compliance within Azure, ensuring that resources deployed within the environment are aligned with security and compliance requirements.",
+              "source": "Internal documentation, Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "5d04c901-70e8-444d-b76a-ad094593a52d",
+              "name": "CNA-07-Terraform Azure Landing Zone Documentation.txt",
+              "collectedDate": "2025-08-08T18:11:52.551179",
+              "description": "Azure environment diagram, Terraform Azure LAnding Zone documentation, JSON configu for Azure Policy - FedRAMP, Firewall and Landing Zone configuration",
+              "source": "External Link",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6a0ec763-bad1-4ea8-a920-3ec17edbde97",
+              "name": "CNA-7_IntelliGRC_Azure_Well-Architected-Framework.tf",
+              "collectedDate": "2025-08-08T18:11:52.551228",
+              "description": "Configures IntelliGRC’s infrastructure to align with the Azure Well-Architected Framework, ensuring that resources are deployed following best practices for reliability, security, cost management, and operational excellence.",
+              "source": "Internal documentation, Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        }
+      ]
+    },
+    {
+      "familyID": "IAM",
+      "familyName": "Identity and Access Management",
+      "controls": [
+        {
+          "id": "IAM-01",
+          "description": "Enforce multi-factor authentication (MFA) using methods that are difficult to intercept or impersonate (phishing-resistant MFA) for all user authentication",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC enforces Multi-Factor Authentication (MFA) for all user accounts interacting with the FedRAMP boundary via Entra ID Conditional Access, utilizing phishing-resistant FIDO2, passkeys, and Windows Hello for Business. Additionally, MFA is required for both privileged and non-privileged user accounts as per IntelliGRC's Identification and Authentication policy.",
+          "evidence": [
+            {
+              "id": "b58c88fa-9369-4e90-ab5f-ea5c2447b538",
+              "name": "IAM-01-Entra ID Conditional Access - CMMC - Require multifactor authentication for all users.png",
+              "collectedDate": "2025-08-08T18:11:52.552776",
+              "description": "Conditional access policy requiring MFA for everyone",
+              "source": "Entra ID Conditional Access",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "f12b3966-23ab-4033-9be5-d633396c1f7e",
+              "name": "IAM-01-Entra ID Conditional Access - FedRAMP - Require passkeys for those touching FedRAMP Boundary.png",
+              "collectedDate": "2025-08-08T18:11:52.552855",
+              "description": "Conditional access policy requiring Phishing Resistant FIDO2 for Admins and those working within the FedRAMP boundary",
+              "source": "Entra ID Conditional Access",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "2bf4a94c-e817-490b-85fa-bb94de7c878e",
+              "name": "IAM-01-jumpbox.tf",
+              "collectedDate": "2025-08-08T18:11:52.552913",
+              "description": "Jumpbox Terraform configuration file",
+              "source": "Azure Devops Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "IAM-02",
+          "description": "Use secure passwordless methods for user authentication and authorization when feasible, otherwise enforce strong passwords with MFA",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC utilizes Entra ID-supported secure passwordless authentication methods, such as FIDO2 security keys, Windows Hello for Business, or Microsoft Authenticator App push notifications, whenever feasible. For scenarios where passwordless authentication is not practical, IntelliGRC enforces strong, complex passwords combined with MFA as defined in the Authenticator Management policy.",
+          "evidence": [
+            {
+              "id": "898e7d93-0715-418f-85ab-fbe2e3f8f359",
+              "name": "IAM-02-Windows Hello for Business Global.png",
+              "collectedDate": "2025-08-08T18:11:52.553049",
+              "description": "Screenshot of Windows Hello for Business settings",
+              "source": "Entra ID Conditional Access, Rules of Behavior policy",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "620508b0-68d2-4157-b178-4d1d1e28beba",
+              "name": "IAM-02-Entra ID Conditional Access - CMMC - Require multifactor authentication for all users.png",
+              "collectedDate": "2025-08-08T18:11:52.553107",
+              "description": "Conditional access policy requiring MFA for everyone",
+              "source": "Entra ID Conditional Access, Rules of Behavior policy",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "31fc20da-27fc-43e6-9f01-c4a25ffeb179",
+              "name": "IAM-02-Rules-of-Behavior Password Requirements with MFA.png",
+              "collectedDate": "2025-08-08T18:11:52.553160",
+              "description": "Screenshot of password requirements from Rules of Behavior",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "IAM-03",
+          "description": "Enforce appropriately secure authentication methods for non-user accounts and services",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC enforces secure authentication for non-user accounts (e.g., service accounts, automation accounts) using Azure Entra ID Managed Identities with federated credentials in accordance with IntelliGRC's Authentication Policy for devices and services.",
+          "evidence": [
+            {
+              "id": "a6484156-08d2-494d-aace-227f56aca535",
+              "name": "IAM-03-identities-services.tf",
+              "collectedDate": "2025-08-08T18:11:52.553283",
+              "description": "Terraform config file detailing how Azure Resources and Identities",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "IAM-04",
+          "description": "Use a least-privileged, role and attribute-based, and just-in-time security authorization model for all user and non-user accounts and services",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC applies a role-based access control (RBAC) model using Azure Entra ID Privileged Identity Management (PIM) and just-in-time (JIT) access controls, strictly enforcing least privilege access. User and non-user accounts are regularly reviewed and privileges adjusted accordingly in alignment with IntelliGRC’s Access Control Policy.",
+          "evidence": [
+            {
+              "id": "1e28c705-9f2b-4962-a986-583bea9c278a",
+              "name": "IAM-04-log-analytics.tf",
+              "collectedDate": "2025-08-08T18:11:52.553397",
+              "description": "IAM-04-log-analytics.tf is the terraform configuration for setting up Sentinel and PIM according to least priviledge.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "7abd72aa-ef0e-4190-bed0-0cb9b5d75161",
+              "name": "IAM-04-Privileged Access granting using PIM.png",
+              "collectedDate": "2025-08-08T18:11:52.553449",
+              "description": "Access granting using PIM.png shows MS Sentinel access being granted by PIM, and certain roles allowed by group, rather than an entire subscription.",
+              "source": "MS Azure",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "IAM-05",
+          "description": "Apply zero trust design principles",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC employs zero trust principles by enforcing continuous authentication, least privilege, strict segmentation, device verification, and conditional access policies through Azure Entra ID Conditional Access and MS Sentinel security monitoring, as documented in IntelliGRC’s System and Communications Protection and Access Control Policies.",
+          "evidence": [
+            {
+              "id": "e8334bed-8f74-4dd7-8204-eb000ba29fdd",
+              "name": "IAM-05 Entra ID Conditional Access - Require compliant devices to access FedRAMP boundary.png",
+              "collectedDate": "2025-08-08T18:11:52.553562",
+              "description": "Entra ID Conditional Access Policy that requires compliant devices to access FedRAMP boundary",
+              "source": "MS Entra ID Conditional Access",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "339259aa-28e4-4fc2-8f58-b4dcc83c40fd",
+              "name": "IAM-05-Defender for Cloud Hardened Containers.png",
+              "collectedDate": "2025-08-08T18:11:52.553613",
+              "description": "Defender for Cloud Hardened containers for Kubernetes",
+              "source": "Defender for Cloud Hardened Containers",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "a331f4b3-6172-457b-a967-f9e4f471bffa",
+              "name": "IAM-05-Defender for Cloud - Container Kubernetes Weekly Security Report.pdf",
+              "collectedDate": "2025-08-08T18:11:52.553664",
+              "description": "Defender for Cloud Hardened containers for Kubernetes report",
+              "source": "Defender for Cloud Hardened Containers",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "9e83eb08-75ca-4e71-b42f-2ab5068f3666",
+              "name": "IAM-05-Azure_app-allowedservices.yaml",
+              "collectedDate": "2025-08-08T18:11:52.553918",
+              "description": ".yaml config file for Azure Services",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "90fd3400-6361-4b00-92a1-da749e809b69",
+              "name": "IAM-05-Azure_authorizationpolicy.yaml",
+              "collectedDate": "2025-08-08T18:11:52.553999",
+              "description": ".yaml file for authorizing the linkerd.io service",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "91d2cdd7-a1ce-4888-aa55-edb694e8c875",
+              "name": "IAM-05-Azure_log-analytics.tf",
+              "collectedDate": "2025-08-08T18:11:52.554055",
+              "description": "Terraform config file for Azure log Analystics and MS Sentinel",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "297b1b11-349e-4594-998f-cfc7dc0f6786",
+              "name": "IAM-05-AzureBastion_Jumpbox_FirewallRules.tf",
+              "collectedDate": "2025-08-08T18:11:52.554107",
+              "description": "Terraform config file for Azure Firewall",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "4ee589f9-e62a-4acc-a21e-e4dedb048159",
+              "name": "IAM-05-AzureBuildAgents_FirewallRules.tf",
+              "collectedDate": "2025-08-08T18:11:52.554157",
+              "description": "Terraform config file for Azurefirewall and Build Agents rules",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "5a7eef30-decc-473a-9058-51ab78304a4a",
+              "name": "IAM-05-AzureContainerRegistryNetwork-acr-nw.tf",
+              "collectedDate": "2025-08-08T18:11:52.554204",
+              "description": "Configures network segmentation and access control for Azure Container Registry (ACR), ensuring secure communication with strict segmentation and enforcing zero trust principles.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "174ea6b4-b711-4946-8876-e4dec6d4ee7c",
+              "name": "IAM-05-AzureFirewall.tf",
+              "collectedDate": "2025-08-08T18:11:52.554254",
+              "description": " Implements Azure Firewall rules to enforce strict traffic control and segmentation, ensuring that only authorized and authenticated traffic is allowed, in line with zero trust principles for access management and security monitoring.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "2d7eb7c3-853b-443f-a9c1-1849e5cb2628",
+              "name": "IAM-05-AzureFirewall_PremiumFWPolicy_lDS.tf",
+              "collectedDate": "2025-08-08T18:11:52.554300",
+              "description": "Terraform config file for Azurefirewall Intrusion Detection System",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "bd5d81c5-63aa-4689-b324-4fc79695cc49",
+              "name": "IAM-05-AzureFirewall_SubnetZoneVariables.tf",
+              "collectedDate": "2025-08-08T18:11:52.554345",
+              "description": "Terraform config file for subnet descriptions",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "acd80db8-1931-4d47-b230-2c776347cdbd",
+              "name": "IAM-05-AzureFrontDoor.tf",
+              "collectedDate": "2025-08-08T18:11:52.554390",
+              "description": "Configures Azure Front Door to manage secure traffic entry, enforcing zero trust principles through strict segmentation and access policies, ensuring authenticated access to the environment.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "533fdc4a-e46a-4f94-94c6-331485265c85",
+              "name": "IAM-05-AzureFrontDoorWAF.tf",
+              "collectedDate": "2025-08-08T18:11:52.554430",
+              "description": "Sets up Azure Web Application Firewall (WAF) with Azure Front Door to protect against common web application threats, ensuring traffic is continuously monitored and authenticated in line with zero trust policies.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "1a529ca7-0bf6-4c66-b6b2-4f66e1ca962b",
+              "name": "IAM-05-AzureJumpboxFirewall.tf",
+              "collectedDate": "2025-08-08T18:11:52.554459",
+              "description": " Configures firewall rules for the Azure Jumpbox, ensuring secure and controlled access for administrative tasks, following least privilege principles and preventing unauthorized lateral movement.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "ab5e76a3-3594-4205-ad91-5ebd7d7e771f",
+              "name": "IAM-05-AzureJumpboxNetwork.tf",
+              "collectedDate": "2025-08-08T18:11:52.554488",
+              "description": "Defines network configurations for the Azure Jumpbox, ensuring strict segmentation and enforcing zero trust access controls for secure management access within the environment.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "9f6b642c-605f-4329-a958-9757a351aad3",
+              "name": "IAM-05-AzureKubenetesService_FirewallRules.tf",
+              "collectedDate": "2025-08-08T18:11:52.554519",
+              "description": "Implements firewall rules for Azure Kubernetes Service (AKS) to restrict and control service-to-service communication, adhering to zero trust principles with least privilege access and strict segmentation.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "e5bc522e-a433-4ea7-8fd5-92ae24a31479",
+              "name": "IAM-05-AzureKubernetesMeshAuthentication_LinkerDEnterprise.yaml",
+              "collectedDate": "2025-08-08T18:11:52.554551",
+              "description": "Configures Linkerd mesh authentication for Azure Kubernetes Service (AKS), ensuring secure, authenticated service-to-service communication within the environment in accordance with zero trust policies.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "575064ad-21c1-4819-b113-5eb0c8589615",
+              "name": "IAM-05-AzureKubernetesServiceFirewall_aks-fw.tf",
+              "collectedDate": "2025-08-08T18:11:52.554581",
+              "description": "Configures firewall rules for Azure Kubernetes Service (AKS), enforcing strict segmentation and access control in line with zero trust principles to protect service communication.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "9885075a-e63c-410a-a5a6-879b5750efac",
+              "name": "IAM-05-AzureManagedldentities.tf",
+              "collectedDate": "2025-08-08T18:11:52.554612",
+              "description": "Defines configurations for Azure Managed Identities, ensuring least privilege access and device verification, aligned with zero trust principles to secure identity management.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "69d07d24-15d4-46e3-af9d-238a81ae3be9",
+              "name": "IAM-05-AzureSecurityCenterFedRAMPModerateBaselineScan.pdf",
+              "collectedDate": "2025-08-08T18:11:52.554641",
+              "description": "Provides a security scan report for Azure Security Center based on FedRAMP Moderate baseline, ensuring compliance with security monitoring requirements for zero trust implementation.",
+              "source": "MS Azure",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "475c316c-6340-4ab3-a680-f0456baae6df",
+              "name": "IAM-05-AzureServerConfig.yaml",
+              "collectedDate": "2025-08-08T18:11:52.554669",
+              "description": "Configures server-level settings in Azure, enforcing strict segmentation and device verification as part of a zero trust strategy to secure infrastructure.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "63326db9-06be-435d-ada8-2d372fabe396",
+              "name": "IAM-05-EmailNotificationPlMEvent.pdf",
+              "collectedDate": "2025-08-08T18:11:52.554698",
+              "description": "Details event-driven email notifications for Privileged Identity Management (PIM) events, supporting zero trust principles by alerting on unauthorized access or deviations from policies.",
+              "source": "MS Entra ID Conditional Access, Defender for Cloud Hardened Containers",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "991b07ec-58ad-4ec4-ad6f-d6f5429b70d1",
+              "name": "IAM-05-Entra ID Conditional Access - FedRAMP - Require passkeys for access to FedRAMP Boundary.png",
+              "collectedDate": "2025-08-08T18:11:52.554727",
+              "description": " Diagram illustrating IntelliGRC's Azure landing zone boundaries, ensuring clear segmentation and strict access control in alignment with zero trust principles.",
+              "source": "MS Entra ID Conditional Access",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6c862691-8ec1-4cc9-ab3b-c14d2e4301cc",
+              "name": "IAM-05-intelligrc_Azure_landing_zones_BoundryDiagram.png",
+              "collectedDate": "2025-08-08T18:11:52.554756",
+              "description": " Implements configuration to align IntelliGRC infrastructure with the Azure Well-Architected Framework, ensuring zero trust practices are embedded in network segmentation, access control, and monitoring.",
+              "source": "Internal Documentation",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "c1eda48e-27ff-43ea-9a85-6c340670170d",
+              "name": "IAM-05-lntelliGRC_Azure_Well-Architected-Framework.tf",
+              "collectedDate": "2025-08-08T18:11:52.554785",
+              "description": "Implements the Azure Well-Architected Framework for IntelliGRC's infrastructure, ensuring the integration of zero trust principles such as continuous authentication, least privilege, and strict segmentation within the architecture, while supporting monitoring through MS Sentinel and conditional access via Azure Entra ID.",
+              "source": "Azure Devops Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "IAM-06",
+          "description": "Automatically disable or otherwise secure accounts with privileged access in response to suspicious activity",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC leverages Defender for Identity to monitor user account comprimise and sign in risks, across all identies. If there is a risky user account, or sign-in, Entra ID Conditional Access revokes all authentication tokens and forces a password change with MFA.",
+          "evidence": [
+            {
+              "id": "3aa1ad56-0669-43db-b274-b815522c5cd1",
+              "name": "IAM-06-Entra ID Conditional Access - Risky Sign-in Sign out of compromised sessions.png",
+              "collectedDate": "2025-08-08T18:11:52.554903",
+              "description": "Entra ID Conditional Access Polices that revokes sign-in tokens, and forces password changes on risky sign in, and user account compromise.",
+              "source": "MS Entra ID Conditional Access",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "efbaac25-27b2-403f-9831-0469aa09e6be",
+              "name": "IAM-06-Entra ID Conditional Access - Risky Sign-In - Require Password Change.png",
+              "collectedDate": "2025-08-08T18:11:52.554939",
+              "description": "Entra ID Conditional Access Polices that revokes sign-in tokens, and forces password changes on risky sign in, and user account compromise.",
+              "source": "MS Entra ID Conditional Access",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        }
+      ]
+    },
+    {
+      "familyID": "INR",
+      "familyName": "Incident Reporting",
+      "controls": [
+        {
+          "id": "INR-01",
+          "description": "Report incidents according to FedRAMP requirements and cloud service provider policies",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC reports incidents in accordance with FedRAMP requirements by following a structured notification flow. Upon discovery, the CISO and Operations Team document the incident and notify the FedRAMP PMO and Authorizing Official within 1 hour, per FedRAMP guidance. The initial report is followed by a 4-hour preliminary report and a comprehensive report within 72 hours. These actions are governed by the Incident Response Plan (IRP) and include coordination with US-CERT or CISA where applicable.",
+          "evidence": [
+            {
+              "id": "2b132bee-59e9-45bb-9448-dea3316c6b82",
+              "name": "INR-01-Incident Reporting.png",
+              "collectedDate": "2025-08-08T18:11:52.556088",
+              "description": "Incident Response Policy Snippet ",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "95fe39b3-c810-4092-a882-4838b4542dea",
+              "name": "INR-01-IR Plan.pdf",
+              "collectedDate": "2025-08-08T18:11:52.556139",
+              "description": "Incident Response Plan",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3e8dbef8-92ae-4a2f-b985-dcdadaa15a4c",
+              "name": "INR-01-SSP-Appendix-G_InteliGRC-Information-System-Contingency-Plan-(ISCP).pdf",
+              "collectedDate": "2025-08-08T18:11:52.556175",
+              "description": "Contingency Plan",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "23fe09ca-557a-4884-992e-7ab8bd3a17a8",
+              "name": "RPL-04-Tabletop_Exercise_Malicious_CustomerData_Deletion.pdf",
+              "collectedDate": "2025-08-08T18:11:52.556208",
+              "description": "Annual Table Top Excercise",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "INR-02",
+          "description": "Maintain a log of incidents and periodically review past incidents for patterns or vulnerabilities",
+          "implementationStatus": true,
+          "implementationStatement": "All incidents are logged and managed in Microsoft Sentinel, which serves as the centralized incident management platform. When new incidents are generated, the InfoSec Team is immediately notified via email and Microsoft Teams to ensure timely awareness and response.\nIncidents are reviewed and investigated daily, rather than monthly, to provide rapid detection and remediation of potential threats. In addition, IntelliGRC leverages threat intelligence indicators of compromise (IOCs) to analyze historical logs, trace malicious activity, and validate whether similar attack patterns have previously occurred.",
+          "evidence": [
+            {
+              "id": "8bbfa62b-000a-41d1-a7a1-20c694923b07",
+              "name": "INR-02-Sentinel Analytic Rules.png",
+              "collectedDate": "2025-08-08T18:11:52.556323",
+              "description": "Sentinel screenshots showing dashboards",
+              "source": "MS Sentinel",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "ae55a79d-55f5-4004-bb9c-2fb9a5d64d8d",
+              "name": "INR-02-Security Operations Efficiency - log-management - Microsoft Azure.pdf",
+              "collectedDate": "2025-08-08T18:11:52.556361",
+              "description": "Workbook rules",
+              "source": "MS Sentinel",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "f485d94b-5c70-4c58-b606-dafe72e16e40",
+              "name": "INR-02 Incident Reporting.png",
+              "collectedDate": "2025-08-08T18:11:52.556394",
+              "description": "Incident Response Policy Snippet",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "INR-03",
+          "description": "Generate after action reports and regularly incorporate lessons learned into operations",
+          "implementationStatus": true,
+          "implementationStatement": "Following incident resolution, the Incident Response Team generates an After-Action Report (AAR) using a standardized template. The report includes a root cause analysis, timeline, impact assessment, and recommendations for improvement. Lessons learned are integrated into updated procedures and security configurations, with the IRP revised as needed. All updates are documented and tracked through corrective action plans.",
+          "evidence": [
+            {
+              "id": "9e48c16b-b505-49c8-840f-6ea51e76d87e",
+              "name": "INR-03-After Action Report 1.png",
+              "collectedDate": "2025-08-08T18:11:52.556478",
+              "description": "Incident After Action Report",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "47a6ccf4-8c21-473e-9fa7-4a8c336cf1d2",
+              "name": "INR-03-After Action Report 2.png",
+              "collectedDate": "2025-08-08T18:11:52.556514",
+              "description": "Incident After Action Report",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6554b2c4-700c-44cb-8ee7-78162a3053f9",
+              "name": "INR-03-After Action Report 3.png",
+              "collectedDate": "2025-08-08T18:11:52.556551",
+              "description": "Incident After Action Report",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "4f491565-83f8-4003-9b05-7405a27697db",
+              "name": "RPL-04-Tabletop_Exercise_Malicious_CustomerData_Deletion.pdf",
+              "collectedDate": "2025-08-08T18:11:52.556585",
+              "description": "Annual Table Top Excercise",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        }
+      ]
+    },
+    {
+      "familyID": "MLA",
+      "familyName": "Monitoring, Logging, and Auditing",
+      "controls": [
+        {
+          "id": "MLA-01",
+          "description": "Operate a Security Information and Event Management (SIEM) or similar system(s) for centralized, tamper-resistent logging of events, activities, and changes",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC operates a centralized Security Information and Event Management (SIEM) platform to collect, correlate, and analyze system-generated event logs across the FedRAMP Moderate boundary. The SIEM system supports tamper-resistant logging by ingesting logs from host-based agents, container platforms, cloud-native logging services, and CI/CD pipeline events, with access restrictions enforced through Entra ID role-based controls. Events and security telemetry from across Azure-hosted environments are transmitted in near real-time to the SIEM for analysis, including authentication events, configuration changes, infrastructure deployments, network activity, and container runtime alerts. This system enables correlation of disparate monitoring information and supports intrusion detection across system interfaces.",
+          "evidence": [
+            {
+              "id": "693320e5-fca6-40a7-b799-84b023431929",
+              "name": "MLA-01-Sentinel - Multiple Tables in use.png",
+              "collectedDate": "2025-08-08T18:11:52.557666",
+              "description": "Screenshot of Sentinel logs and tables",
+              "source": "MS Sentinel ",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3b706045-422e-4c19-83b4-798a5abbfaf0",
+              "name": "MLA-01-Sentinel Data Connectors.png",
+              "collectedDate": "2025-08-08T18:11:52.557733",
+              "description": "Screenshot of Sentinel data connectors",
+              "source": "MS Sentinel ",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "2cd82c87-1701-40ff-a064-715d303df994",
+              "name": "MLA-01-Audit Logs deletion prevention.png",
+              "collectedDate": "2025-08-08T18:11:52.557772",
+              "description": "Screenshot denying the deletion of logs",
+              "source": "MS Sentinel ",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "667c69d4-d01b-4f20-9c1e-72d32122ac3d",
+              "name": "MLA-01-AzureLogAnalytics.tf",
+              "collectedDate": "2025-08-08T18:11:52.557807",
+              "description": "Terraform config file for Sentinel, which configures access and permissions according to least priviledge",
+              "source": "MS Sentinel ",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "a6de02b3-f565-4b8e-9f08-6ebe3df2646e",
+              "name": "MLA-01-AzureSentinel.tf",
+              "collectedDate": "2025-08-08T18:11:52.557841",
+              "description": "Terraform config file for Sentinel_onboarding and workspace resources",
+              "source": "MS Sentinel ",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "MLA-02",
+          "description": "Regularly review and audit logs",
+          "implementationStatus": true,
+          "implementationStatement": "Log data collected by IntelliGRC’s SIEM is actively reviewed by the Security Team to detect indicators of compromise, unauthorized use, anomalous patterns, and system misuse. Reviews are performed routinely, with elevated scrutiny applied during high-risk periods or after incidents. The Security Team is responsible for analyzing event and anomaly data and correlating that information across systems for impact assessment. Quarterly summaries of key events, anomalies, and findings are delivered to the CISO and System Owner, supporting visibility into operational risk and policy compliance.",
+          "evidence": [
+            {
+              "id": "0ea0a4e5-65fb-4913-9f3f-cdeb8e9859f4",
+              "name": "MLA-02-Service Ticket 45_ SIEM and Sentinel Log review week 32_2025.pdf",
+              "collectedDate": "2025-08-08T18:11:52.557943",
+              "description": "Service Ticket",
+              "source": "ITSM",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "16255421-20c8-453b-be65-fbe6954afdd4",
+              "name": "MLA-02-Sentinel Workbook Screenshot.png",
+              "collectedDate": "2025-08-08T18:11:52.557982",
+              "description": "Screenshot of Microsoft Sentinel Workbook",
+              "source": "MS Sentinel",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "MLA-03",
+          "description": "Rapidly detect and remediate or mitigate vulnerabilities",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC maintains an integrated vulnerability management process that enables rapid identification, tracking, and remediation of system vulnerabilities. Vulnerabilities are identified through continuous scanning, vendor bulletins, CISA alerts, and threat intelligence feeds. The CloudOps and Development Teams collaborate to validate and resolve detected vulnerabilities within 30 days for high/critical vulnerabilities. The CloudOps Team uses infrastructure-as-code automation and configuration management tools to deploy updates, ensuring that flaw remediation efforts are systematically applied and traceable.",
+          "evidence": [
+            {
+              "id": "e2ef8445-7d67-416a-9fbf-9b2f8f880989",
+              "name": "MLA-03-Security Operations Efficiency - log management - Microsoft Azure.pdf",
+              "collectedDate": "2025-08-08T18:11:52.558081",
+              "description": "MLA-03-Security Operations Efficiency - log management - Microsoft Azure.pdf shows the security operations efficiency dashboard. ",
+              "source": "MS Sentinel",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "177a0d3c-1492-43f2-9396-03927411eafe",
+              "name": "MLA-03-Analytic rules used for detection.png",
+              "collectedDate": "2025-08-08T18:11:52.558119",
+              "description": "MLA-03-Analytic rules used for detection.png lists the multiple rules applies in Sentinel",
+              "source": "MS Sentinel",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "94693111-1cb1-4b43-a73d-d6c2addf7d38",
+              "name": "MLA-03-Threat Intelligence - log management - Microsoft Azure.pdf",
+              "collectedDate": "2025-08-08T18:11:52.558152",
+              "description": "MLA-03-Threat Intelligence - log management - Microsoft Azure.pdf shows the log analytics leveraged by MS Defender and MS Sentinel.",
+              "source": "MS Sentinel",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "300bbed4-417b-457b-96c0-8bbb950de286",
+              "name": "MLA-03-Vulnerability Remediation Timeline.png",
+              "collectedDate": "2025-08-08T18:11:52.558184",
+              "description": "Screenshot of Systems and Information Integrity Procedures",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "872e8eff-798d-4940-8bf6-8f8ecd2b6e38",
+              "name": "PIY-04-Code Scanning.png",
+              "collectedDate": "2025-08-08T18:11:52.558214",
+              "description": "Screenshot of the Advanced Security - Code Scanning view listing log entries",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3dd8ab2c-6cf6-4770-8dee-3d3edf48f625",
+              "name": "PIY-04-Vulnerabilities.png",
+              "collectedDate": "2025-08-08T18:11:52.558265",
+              "description": "Screenshot of Microsoft Defender for Cloud dashboard listing vulnerabilities.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "48bbd7cc-0aa4-463c-ac1a-418a9640af41",
+              "name": "PIY-04-code-scan.yml.txt",
+              "collectedDate": "2025-08-08T18:11:52.558307",
+              "description": "Automates vulnerability scanning within the CI/CD pipeline to quickly detect and remediate vulnerabilities, ensuring high/critical issues are resolved within 30 days and updates are deployed through infrastructure-as-code tools.",
+              "source": "Systems and Information Integrity Procedures (SI-02), MS Sentinel",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "68c1fbeb-e1d5-4a98-8742-c72c5bdd5f65",
+              "name": "PIY-03 Policy and Inventory Vulnerability Reporting.png",
+              "collectedDate": "2025-08-08T18:11:52.558339",
+              "description": "Screenshot of ability to submit a vulnerabilty report through the IntelliGRC public website",
+              "source": "IntelliGRC public website",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6288703f-3840-469c-a0b7-688d8f3efe01",
+              "name": "PIY-03-Vulnerability Report (intelliacr.azurecr.io_actionplan_v0.30.5).pdf",
+              "collectedDate": "2025-08-08T18:11:52.558375",
+              "description": "Screenshot of vulnerability scan report identifying and rating security issues.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "MLA-04",
+          "description": "Perform authenticated vulnerability scanning on information resources",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC conducts monthly authenticated vulnerability scans across all production environment systems and components within the FedRAMP boundary. Scans are performed using approved security tools that integrate with host agents and Azure infrastructure to collect configuration and patch-level information. Results from each scan are analyzed by the Security Team, validated for false positives, and routed to responsible teams for remediation.",
+          "evidence": [
+            {
+              "id": "27b909f6-e311-44b9-a75b-b443a1d85c5c",
+              "name": "MLA-04-Sample of Burp Suite Authenticated application test results.png",
+              "collectedDate": "2025-08-08T18:11:52.558469",
+              "description": "Screenshot of Burpsuite scanner results",
+              "source": "Burpsuite report",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "dcf958f8-dd09-4fd2-83bf-1add1a40d52f",
+              "name": "MLA-04-Last red team test snippet methodology.png",
+              "collectedDate": "2025-08-08T18:11:52.558513",
+              "description": "Red Team Testing Snippet",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "528413d9-5893-43ab-b0d4-d549889169db",
+              "name": "MLA-04-Last red team test snippet - test notes.png",
+              "collectedDate": "2025-08-08T18:11:52.558566",
+              "description": "Red Team Testing Snippet",
+              "source": "Internal notes",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "MLA-05",
+          "description": "Perform Infrastructure as Code and configuration evaluation and testing",
+          "implementationStatus": true,
+          "implementationStatement": "Infrastructure deployments and changes at IntelliGRC are implemented using infrastructure-as-code (IaC) through version-controlled pipelines in Azure DevOps. These configurations are subjected to automated security scanning and syntax validation during the CI/CD process prior to deployment. Evaluation tools check for misconfigurations, insecure default settings, or deprecated resources. The QA and CloudOps Teams collaborate to verify that all code and configurations conform to required baselines, including security hardening guidelines and Azure best practices. Any changes are staged and tested in non-production environments before release to production.",
+          "evidence": [
+            {
+              "id": "b7544cfd-ea7d-42b4-a581-c5b5c751b8af",
+              "name": "CNA-04-alz-mgmt terraform configuration identities.tf.png",
+              "collectedDate": "2025-08-08T18:11:52.558677",
+              "description": "Azure Landing Zone terraform config",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "71020a8d-a8cb-4540-aaf2-edd896d22e6e",
+              "name": "MLA-05-Checkov Scan.txt",
+              "collectedDate": "2025-08-08T18:11:52.558725",
+              "description": "Checkov scan",
+              "source": "Checkov Scan report",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "9796da3e-9f6f-450a-8b02-78643fc213ff",
+              "name": "MLA-05-Terraform Formatting.txt",
+              "collectedDate": "2025-08-08T18:11:52.558772",
+              "description": "Terraform formatting file",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "MLA-06",
+          "description": "Centrally track and prioritize the mitigation and/or remediation of identified vulnerabilities",
+          "implementationStatus": true,
+          "implementationStatement": "The IntelliGRC Security Team centrally tracks and prioritizes remediation efforts using a POA&M maintained in SharePoint under version control with restricted access via Entra ID RBAC. All identified vulnerabilities from 3PAO assessments, vulnerability scans, audits, and ConMon activities are documented with risk ratings, affected controls, remediation actions, responsible parties, and due dates. The POA&M is updated monthly to reflect progress, add new findings, and adjust timelines as necessary.",
+          "evidence": [
+            {
+              "id": "f64c457f-e5a0-456d-9bfa-1dab0dd40a71",
+              "name": "MLA-06-POAM Enhanced_Report.xlsx",
+              "collectedDate": "2025-08-08T18:11:52.558910",
+              "description": "POA&M Report",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "7e4f67e7-ef0d-4b22-a516-f863bb9d574b",
+              "name": "PIY-06-IntelliGRC FedRAMP RBAC Matrix.xlsx",
+              "collectedDate": "2025-08-08T18:11:52.558962",
+              "description": "FedRAMP RBAC Matrix",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        }
+      ]
+    },
+    {
+      "familyID": "PIY",
+      "familyName": "Policy and Inventory",
+      "controls": [
+        {
+          "id": "PIY-01",
+          "description": "Have an up-to-date information resource inventory or code defining all deployed assets, software, and services",
+          "implementationStatus": true,
+          "implementationStatement": "The CloudOps Team, in coordination with the Security Team, maintains a current and comprehensive inventory of all system components. Updates are automatically triggered during component installation, removal, or upgrades. The inventory is reviewed and updated at least monthly or when changes occur.",
+          "evidence": [
+            {
+              "id": "09ce9375-e0b5-4b8e-ac56-4de3216ccfc1",
+              "name": "PIY-01-prod-sboms.zip",
+              "collectedDate": "2025-08-08T18:11:52.560497",
+              "description": "SBOM Package",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "42785e68-15ca-4828-8cee-69641c02639c",
+              "name": "PIY-01- prod-packages.csv",
+              "collectedDate": "2025-08-08T18:11:52.560575",
+              "description": "SBOM Produciton Package",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "7b771859-9eeb-4db3-8b86-dd6249ab2ecd",
+              "name": "PIY-01-Q3 2025 SBOM Generation and Review.pdf",
+              "collectedDate": "2025-08-08T18:11:52.560628",
+              "description": "Service Ticket",
+              "source": "ITSM",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "b7eb7190-a875-4a2a-a4c7-bacae612c78b",
+              "name": "PIY-01-SSP-Appendix-M-Integrated-Inventory-Workbook.xlsx",
+              "collectedDate": "2025-08-08T18:11:52.560683",
+              "description": "FedRAMP Integrated Inventory Workbook",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "PIY-02",
+          "description": "Have policies outlining the security objectives of all information resources",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC has established formally documented security policies that define the security objectives for all information resources within the environment. These policies are developed and maintained in alignment with applicable FedRAMP Moderate baseline requirements and NIST SP 800-53 Rev. 5 control families.\nEach policy document outlines the organization's approach, scope, roles and responsibilities, implementation strategies, and compliance expectations for safeguarding information resources. This includes, but is not limited to, policies for Access Control, Configuration Management, Audit and Accountability, Identification and Authentication, Incident Response, Contingency Planning, and System and Communications Protection. These policy documents establish overarching security objectives such as confidentiality, integrity, availability, accountability, auditability, and risk mitigation for all assets, systems, and data categorized under the IntelliGRC environment.",
+          "evidence": [
+            {
+              "id": "e8761b85-4291-4b59-a024-c8339ef97ab7",
+              "name": "PIY-02-Annual Security and Awareness Training v2025-08.xlsx",
+              "collectedDate": "2025-08-08T18:11:52.560823",
+              "description": "Spreadsheet showing staff training attestation records",
+              "source": "M365 Defender Admin Portal",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3331ba01-c483-4ab5-982b-98a176da8b9f",
+              "name": "PIY-02-Q3 2025 Training report (July 2025).csv",
+              "collectedDate": "2025-08-08T18:11:52.560875",
+              "description": "Spreadsheet showing staff training attestation records",
+              "source": "M365 Defender Admin Portal",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3406473b-8569-4bae-ade1-88c396be9f16",
+              "name": "PIY-02-Rules of Behavior.pdf",
+              "collectedDate": "2025-08-08T18:11:52.560919",
+              "description": "IntelliGRC Rules of Behavior policy",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "dda2509a-e164-4cfe-9c1e-2e1880b73de1",
+              "name": "PIY-02-List of Policies 1.png",
+              "collectedDate": "2025-08-08T18:11:52.560960",
+              "description": "IntelliGRC policies housed within SharePoint Online",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "1ab76958-8e24-4748-bd91-c52cdc60512d",
+              "name": "PIY-02-List of Policies 2.png",
+              "collectedDate": "2025-08-08T18:11:52.561001",
+              "description": "IntelliGRC policies housed within SharePoint Online",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "620804e5-2e2e-41d8-a522-efa024235a19",
+              "name": "PIY-02-PolicyReview-Rules of Behavior 2025-07-11.csv",
+              "collectedDate": "2025-08-08T18:11:52.561042",
+              "description": "Spreadsheet showing staff Rules of Behavior attestation records",
+              "source": "M365 Defender Admin Portal",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "PIY-03",
+          "description": "Maintain a vulnerability disclosure program",
+          "implementationStatus": true,
+          "implementationStatement": "External parties can report suspected security vulnerabilities through the IntelliGRC Support Portal or by emailing the support team at vulnerabilites@intelligrc.com. These reporting mechanisms are monitored by the IntelliGRC Security Team.\nUpon receipt, reported vulnerabilities are triaged, validated, and managed in accordance with the vulnerability monitoring and remediation procedures defined in the Risk Assessment documentation. This includes coordination with the CloudOps and Development Teams to analyze risk impact and implement timely remediation actions.",
+          "evidence": [
+            {
+              "id": "93063cff-aaac-43dc-affa-1ff2ad3969a7",
+              "name": "PIY-03 Policy and Inventory Vulnerability Reporting.png",
+              "collectedDate": "2025-08-08T18:11:52.561162",
+              "description": "Screenshot of ability to submit a vulnerabilty report through the IntelliGRC public website",
+              "source": "IntelliGRC public website",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "707885c7-9dfe-40c5-8729-910794e15fb0",
+              "name": "PIY-03-Vulnerability Report (intelliacr.azurecr.io_actionplan_v0.30.5).pdf",
+              "collectedDate": "2025-08-08T18:11:52.561207",
+              "description": "Screenshot of vulnerability scan report identifying and rating security issues.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "252aae28-c41f-407c-a7e0-890b3b361150",
+              "name": "PIY-03-CISA Vulnerability.pdf",
+              "collectedDate": "2025-08-08T18:11:52.561248",
+              "description": "External vulnerability advisories",
+              "source": "CISA email subscription",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3aa784a4-d020-4fa6-a76e-1db9c23c095e",
+              "name": "PIY-03-Krebs Vulnerability.pdf",
+              "collectedDate": "2025-08-08T18:11:52.561287",
+              "description": "External vulnerability advisories",
+              "source": "KrebsOnSecurity Mailing List subscription",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "PIY-04",
+          "description": "Build security considerations into the Software Development Lifecycle and align with CISA Secure By Design principles",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC incorporates security throughout the Software Development Lifecycle (SDLC) in alignment with FedRAMP Moderate controls and core CISA Secure by Design principles. Security is built into design, development, testing, and deployment stages through a combination of procedural safeguards, cross-team collaboration, and automated tooling.\nThe Development and CloudOps Teams apply secure coding practices, input validation (SI-10), and error handling controls (SI-11) as part of normal development activities. Code and configuration changes undergo peer review, static code analysis, and integrity validation prior to deployment into production.\nThe QA and Security Teams perform flaw remediation testing, validate system behavior under transitional conditions, and coordinate remediation through the change control process (SI-02, SI-06).\nSecurity testing is integrated into the CI/CD pipelines to detect unauthorized code, validate signatures, and ensure that infrastructure-as-code deployments comply with organizational security baselines.",
+          "evidence": [
+            {
+              "id": "ee5e5c3f-4bd4-404b-b70d-d67b29f21245",
+              "name": "PIY-04-Alerts.png",
+              "collectedDate": "2025-08-08T18:11:52.561391",
+              "description": "Screenshot of Azure DevOps Advanced Security Dashboard showing alerts trends, dependency alerts by severity, and code scanning alerts by severity",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "8156f9af-93b4-48dc-975d-a6b0442a0666",
+              "name": "PIY-04-Code Scanning.png",
+              "collectedDate": "2025-08-08T18:11:52.561440",
+              "description": "Screenshot of the Advanced Security - Code Scanning view listing log entries",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "b1402fb2-2ea3-4a99-bb9f-72c98b1680f3",
+              "name": "PIY-04-Vulnerabilities.png",
+              "collectedDate": "2025-08-08T18:11:52.561479",
+              "description": "Screenshot of Microsoft Defender for Cloud dashboard listing vulnerabilities.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "fb99d765-30e4-4a0d-84ef-61fd4bf3160d",
+              "name": "PIY-04-actionplan-ci.yml.txt",
+              "collectedDate": "2025-08-08T18:11:52.561518",
+              "description": " Defines the CI pipeline action plan for IntelliGRC, ensuring security checks are integrated throughout the Software Development Lifecycle (SDLC), including secure coding practices and automated testing for vulnerabilities.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3503a5a0-6932-491b-a750-178aee819918",
+              "name": "PIY-04-code-scan.yml.txt",
+              "collectedDate": "2025-08-08T18:11:52.561556",
+              "description": " Implements code scanning within the CI pipeline, enforcing static code analysis, integrity validation, and security checks for input validation and error handling to meet FedRAMP Moderate and CISA Secure by Design principles.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "1fc4ae17-2995-4f87-b8b0-f131a83d7c16",
+              "name": "PIY-04-buildandtag.yml.txt",
+              "collectedDate": "2025-08-08T18:11:52.561593",
+              "description": " Configures the build and tagging process in the CI/CD pipeline, ensuring secure code deployments by enforcing security testing, peer reviews, and proper tagging according to the organizational security baselines.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "f74516ce-b8e3-41a6-8f8a-5a2e51971da1",
+              "name": "PIY-04-check.yaml",
+              "collectedDate": "2025-08-08T18:11:52.561631",
+              "description": "Defines the security checks and validations within the SDLC, integrating automated tooling to detect unauthorized code and ensure compliance with security best practices and organizational baselines during deployment.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "10c352e1-a83c-4f71-b0a0-9149d22c3fbb",
+              "name": "PIY-04-ci.yaml",
+              "collectedDate": "2025-08-08T18:11:52.561668",
+              "description": " Configures the continuous integration pipeline, incorporating security controls for code validation, peer review, and automated vulnerability scanning to ensure that infrastructure-as-code deployments align with security requirements.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "4433cdbc-62a9-4b09-8c78-0b1c75a4cc41",
+              "name": "PIY-04-Minimum Reviewer Policy.png",
+              "collectedDate": "2025-08-08T18:11:52.561705",
+              "description": "Screenshot of minimum reviewers policy",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "9edeb07f-8572-4789-8c81-97a888d56fff",
+              "name": "PIY-05-IntelliGRC - Systems Development Life Cycle (SDLC).pdf",
+              "collectedDate": "2025-08-08T18:11:52.561742",
+              "description": "Systems Development Life Cycle documentation",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "PIY-05",
+          "description": "Document methods used to evaluate information resource implementations",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC documents evaluation methods for all information resources through its integrated System Development Life Cycle (SDLC), planning processes, and security assessment activities. These evaluations are embedded in:\nThe System Security Plan (SSP) and related planning documentation,\nThe acquisition and procurement lifecycle,\nPeriodic security control assessments and continuous monitoring.\nThe Planning policy requires documentation of system components, architecture, operational context, and control baselines. It also mandates the identification of threats, vulnerabilities, and rationale for design decisions.\nSystem implementations are evaluated for their alignment with the enterprise architecture, risk tolerance, and FedRAMP Moderate requirements before deployment and throughout the operational lifecycle.",
+          "evidence": [
+            {
+              "id": "be292959-5e2f-4a3b-87e4-f41a70c614ea",
+              "name": "PIY-05_IntelliGRC_ConMonEvidence.pdf",
+              "collectedDate": "2025-08-08T18:11:52.561834",
+              "description": "ConMon Screenshot Document",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "9ec23cac-6019-487f-a342-fbd5876db317",
+              "name": "PIY-05-IntelliGRC - Systems Development Life Cycle (SDLC).pdf",
+              "collectedDate": "2025-08-08T18:11:52.561875",
+              "description": "Systems Development Life Cycle documentation",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "PIY-06",
+          "description": "Have a dedicated staff and budget for security with executive support, commensurate with the size, complexity, scope, and risk of the service offering",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC allocates dedicated security staff, assigns key roles, and plans for security-specific funding in accordance with its system and services acquisition process. The System Owner defines and documents the required security and privacy resources, the CISO ensures funding is allocated during the organization’s capital planning and investment cycles,\nand budgeting includes dedicated security line items and personnel to support the size and complexity of IntelliGRC’s FedRAMP Moderate SaaS offering.\nThese resourcing commitments are documented, reviewed, and approved by executive leadership as part of ongoing security governance.",
+          "evidence": [
+            {
+              "id": "f4986ffd-7a0d-4956-91d7-0d63ba7fb9a1",
+              "name": "PIY-06-IntellGRD FedRAMP RBAC Matrix.xslx",
+              "collectedDate": "2025-08-08T18:11:52.561959",
+              "description": "FedRAMP RBAC Matrix",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "66606921-eca5-4b0d-9bc4-77b2eee8e3b3",
+              "name": "PIY-06-Security Allocation Budget.png",
+              "collectedDate": "2025-08-08T18:11:52.561999",
+              "description": "Security Budget",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "487f8027-c141-4116-b482-44df91ae36e6",
+              "name": "PIY-06-FedRAMPProjectManagementGanttChart.png",
+              "collectedDate": "2025-08-08T18:11:52.562035",
+              "description": "FedRAMP Project Gantt Chart",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "PIY-07",
+          "description": "Document risk management decisions for software supply chain security",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC documents software supply chain risk management decisions as part of its acquisition and development lifecycle. This includes:\nRisk assessments conducted prior to outsourcing or acquiring system components,\nApproval of external services by the Authorizing Official,\nDefined security and privacy requirements embedded in supplier contracts and service-level agreements.",
+          "evidence": [
+            {
+              "id": "2ad3b71c-219e-42dc-9525-733d8c819a42",
+              "name": "PIY-07-IntelliGRC - Supply Chain Risk Management (SCRM) Plan_v1.0.pdf",
+              "collectedDate": "2025-08-08T18:11:52.562117",
+              "description": "Supply Chain Risk Management Policy",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "e70ffd41-be63-44fb-8834-e7061795b873",
+              "name": "PIY-07-Supply Chain Risk Management Policy.docx",
+              "collectedDate": "2025-08-08T18:11:52.562158",
+              "description": "Supply Chain Risk Management Policy",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "68c666e3-4e32-47f0-abf5-261aa4bc798c",
+              "name": "PIY-07-IntelliGRC_Prod-SBOM_Summary-8.8.25.csv",
+              "collectedDate": "2025-08-08T18:11:52.562195",
+              "description": "SBOM Produciton Package",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "0ee2d69a-ea04-4a2b-b31e-685eef28a47f",
+              "name": "IntelliGRC_SBOM_Package_8.8.25.zip",
+              "collectedDate": "2025-08-08T18:11:52.562233",
+              "description": "SBOM Package",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        }
+      ]
+    },
+    {
+      "familyID": "RPL",
+      "familyName": "Recovery Planning",
+      "controls": [
+        {
+          "id": "RPL-01",
+          "description": "Define Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO)",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC defines Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs) as part of its contingency planning process. The CISO is responsible for defining the RTO and RPO values based on system categorization, business continuity requirements, and Service Level Agreements (SLAs). These objectives are documented in the Contingency Plan and aligned with mission/business function priorities to ensure timely system restoration following a disruption.",
+          "evidence": [
+            {
+              "id": "dc9c2bb8-48c8-446f-a0bf-2d85ab161199",
+              "name": "RPL-01-RTO and RPO Definitions.png",
+              "collectedDate": "2025-08-08T18:11:52.563243",
+              "description": "Contingency Plan ",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "fb857644-2cba-4b83-8781-b9e8a40f1ace",
+              "name": "INR-01-SSP-Appendix-G_InteliGRC-Information-System-Contingency-Plan-(ISCP).pdf",
+              "collectedDate": "2025-08-08T18:11:52.563296",
+              "description": "Contingency Plan ",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "RPL-02",
+          "description": "Develop and maintain a recovery plan that aligns with the defined recovery objectives",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC maintains a documented Contingency Plan that includes recovery strategies aligned with defined RTOs and RPOs. The plan is developed by the Contingency Team, approved by the CISO and System Owner, and distributed to authorized personnel via SharePoint with role-based access controls. The plan includes system restoration approaches, coordination with incident response, alternate site readiness, and ensures recovery does not degrade security controls. The Contingency Plan is reviewed at least annually or after significant changes or incidents.",
+          "evidence": [
+            {
+              "id": "e19cbac3-c320-40e5-ad3a-8f4bb102a0a5",
+              "name": "INR-01-SSP-Appendix-G_InteliGRC-Information-System-Contingency-Plan-(ISCP).pdf",
+              "collectedDate": "2025-08-08T18:11:52.563387",
+              "description": "Contingency Plan ",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "RPL-03",
+          "description": "Perform system backups aligned with recovery objectives",
+          "implementationStatus": true,
+          "implementationStatement": "System and user-level data backups are performed by the CloudOps Team using Azure’s geo-redundant storage capabilities. Backups are configured to occur at a frequency that meets or exceeds RPO requirements—typically, daily incremental and weekly full backups. System documentation and configurations are also backed up and protected using Azure RBAC and encryption-at-rest. Backup operations are monitored, and access to backup data is restricted via access controls and cryptographic safeguards.",
+          "evidence": [
+            {
+              "id": "44293996-3b61-4d70-aa24-5ca4d7da696d",
+              "name": "RPL-03-Backup Responsibilty.PNG",
+              "collectedDate": "2025-08-08T18:11:52.563465",
+              "description": "Contingency Plan Snippet",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "48d71130-3eea-419d-a7bc-908e24c303bb",
+              "name": "RPL-03-Backup Location.PNG",
+              "collectedDate": "2025-08-08T18:11:52.563502",
+              "description": "Contingency Plan Snippet",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "354f84ea-2528-4052-b307-7d902ff01b25",
+              "name": "RPL-03-Backup Components.PNG",
+              "collectedDate": "2025-08-08T18:11:52.563537",
+              "description": "Contingency Plan Snippet",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "12dc1950-066c-4d9d-b300-eb61e023f29e",
+              "name": "RPL-03-Backup Definitions.PNG",
+              "collectedDate": "2025-08-08T18:11:52.563570",
+              "description": "Contingency Plan Snippet",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "29c32fbe-be39-4003-8bc8-927703a6c2a5",
+              "name": "RPL-03-backup-vault.tf",
+              "collectedDate": "2025-08-08T18:11:52.563602",
+              "description": "Screenshot of definitions for backup-related items",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "8eacd0cc-6874-4a84-8ae3-b06fa7f7855b",
+              "name": "RPL-03-Incident Response Roles 1.PNG",
+              "collectedDate": "2025-08-08T18:11:52.563633",
+              "description": "Incident Response Organizational Roles ",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "5b2bebba-3ecd-48b1-bcf1-42bc2c02ccfc",
+              "name": "RPL-03-Incident Response Roles 2.PNG",
+              "collectedDate": "2025-08-08T18:11:52.563665",
+              "description": "Incident Response Organizational Roles ",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "177f695d-e085-4f54-9c1e-e9d254ec80ff",
+              "name": "INR-01-SSP-Appendix-G_InteliGRC-Information-System-Contingency-Plan-(ISCP).pdf",
+              "collectedDate": "2025-08-08T18:11:52.563696",
+              "description": "Contingency Plan",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "fdb39c27-a8d3-49da-b3e3-9bbcff87fe5f",
+              "name": "RPL-01-CP - Contingency Planning Policy.pdf",
+              "collectedDate": "2025-08-08T18:11:52.563725",
+              "description": "Contingency Policy ",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "RPL-04",
+          "description": "Regularly test the capability to recover from incidents and contingencies",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC tests its ability to recover from system disruptions at least annually, as documented in the Contingency Plan. The Contingency Team conducts tests such as tabletop exercises or functional recovery tests. These tests validate the effectiveness of recovery strategies and alignment with RTO/RPO requirements. Results are documented in test reports, reviewed by the CISO, and used to initiate any corrective actions. Lessons learned are incorporated into future plan updates and training content.",
+          "evidence": [
+            {
+              "id": "23a20e7e-216f-43cc-a367-f085e013bbe7",
+              "name": "RPL-04-Contingency Plan Test Requriement.png",
+              "collectedDate": "2025-08-08T18:11:52.563797",
+              "description": "Contingency Plan Snippet",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "0d6a375d-fbe5-4848-ad73-29117b5dbc2e",
+              "name": "RPL-04-Incident Respose Test Requirement.png",
+              "collectedDate": "2025-08-08T18:11:52.563831",
+              "description": "Incident Response Plan Snippet ",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "1a560649-d7d5-48eb-9ac5-a9af0e0bc83b",
+              "name": "RPL-04-Incident Response Evalutaion.png",
+              "collectedDate": "2025-08-08T18:11:52.563862",
+              "description": "Incident Response Policy Snippet",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3b5fa290-75ea-4cf3-93b1-2bcc2bee3ae0",
+              "name": "INR-01-SSP-Appendix-G_InteliGRC-Information-System-Contingency-Plan-(ISCP).pdf",
+              "collectedDate": "2025-08-08T18:11:52.563891",
+              "description": "Contingency Plan",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3c0a5907-6242-4ced-8c6d-15bdcf8b57f2",
+              "name": "RPL-01-CP - Contingency Planning Policy.pdf",
+              "collectedDate": "2025-08-08T18:11:52.563921",
+              "description": "Contingency Policy Snippet ",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "4125e36f-ee0f-43e1-8b06-766bab63343e",
+              "name": "RPL-04-Tabletop_Exercise_Malicious_CustomerData_Deletion.pdf",
+              "collectedDate": "2025-08-08T18:11:52.563950",
+              "description": "Annual Table Top Excercise",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        }
+      ]
+    },
+    {
+      "familyID": "SVC",
+      "familyName": "Service Configuration",
+      "controls": [
+        {
+          "id": "SVC-01",
+          "description": "Harden and review network and system configurations",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC employs hardened configuration baselines aligned with industry-standard guidelines (CIS Benchmarks, DISA STIGs), enforced via automated tools and continuous monitoring. System and network configurations are regularly reviewed and audited to prevent unauthorized changes. Containers use a hardened base image and are monitoring for vulnerabilities.",
+          "evidence": [
+            {
+              "id": "ba919497-4190-4788-9c44-75d57c87e23e",
+              "name": "SVC-01-Dockerfile.txt",
+              "collectedDate": "2025-08-08T18:11:52.564730",
+              "description": "Defines the configuration for the Docker container, ensuring it uses a hardened base image and follows industry-standard security guidelines (CIS Benchmarks, DISA STIGs) to maintain secure and compliant deployments.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "5450ff9f-0c7d-4254-bc97-793ade2b4a1e",
+              "name": "SVC-01-policy_assignment_fedramp_moderate.json",
+              "collectedDate": "2025-08-08T18:11:52.564772",
+              "description": "Configures policy assignments to enforce FedRAMP Moderate baseline security controls across the environment, ensuring alignment with industry best practices and continuous compliance monitoring.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "23f0c9ad-74a5-44a1-8513-7ca4fafe48b8",
+              "name": "SVC-01-jumpbox-config.conf",
+              "collectedDate": "2025-08-08T18:11:52.564805",
+              "description": "Configures the secure settings for the jumpbox, ensuring it follows hardened baselines and is regularly audited to prevent unauthorized changes, in line with security and compliance requirements.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "a4bc4d08-c3cf-426b-bd1f-a22458aedaff",
+              "name": "SVC-01-message-scheduler-v0.1.3-results.xml",
+              "collectedDate": "2025-08-08T18:11:52.564837",
+              "description": "Contains results from the automated security and compliance scanning of the message scheduler, ensuring it aligns with hardened configuration baselines and identifying any vulnerabilities.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "8eae0647-48be-4037-8940-48fe7404da98",
+              "name": "SVC-01-AzureSecurityCenterFedRAMPModerateBaselineScan.pdf",
+              "collectedDate": "2025-08-08T18:11:52.564867",
+              "description": "Provides the results of an Azure Security Center scan based on the FedRAMP Moderate baseline, demonstrating compliance with security guidelines for the environment.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "SVC-02",
+          "description": "Encrypt or otherwise secure network traffic",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC secures all network traffic with approved cryptographic protocols (TLS 1.2 or higher), ensuring end-to-end encryption from Azure Front Door to backend services hosted in Azure Kubernetes Service (AKS). TLS is enforced for all supporting Azure services, including Azure Key Vault, Azure Database for PostgreSQL, and Azure Storage, protecting data in transit between application components and platform services. Within the Kubernetes environment, service-to-service communication is further secured using Linkerd mutual TLS (mTLS), providing authenticated and encrypted connections between microservices. These comprehensive controls maintain the confidentiality and integrity of data in transit throughout the entire environment.",
+          "evidence": [
+            {
+              "id": "403be93a-e20c-45f1-8bf4-185b6ccc57ee",
+              "name": "SVC-02-deployment.yaml",
+              "collectedDate": "2025-08-08T18:11:52.564992",
+              "description": "Configures the deployment of backend services in Azure Kubernetes Service (AKS), ensuring that network traffic is encrypted using TLS 1.2 or higher and securing service-to-service communication with Linkerd mutual TLS (mTLS).",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "041f96ce-6963-4365-ba4c-953dec1c6038",
+              "name": "SVC-02-encryptionon psqlfs 2.png",
+              "collectedDate": "2025-08-08T18:11:52.565150",
+              "description": "Visual representation of the encryption configuration for PostgreSQL services",
+              "source": "Azure Portal",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "de7db3a7-faed-4a8b-91f5-2b6acab24e83",
+              "name": "SVC-02-encryption on psqlfs.png",
+              "collectedDate": "2025-08-08T18:11:52.565294",
+              "description": "Another visual representation showcasing the encryption configuration for PostgreSQL services",
+              "source": "Azure Portal",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "264c00e8-f4e9-4df3-b2e3-76714bbcf2d8",
+              "name": "SVC-02-values.yaml",
+              "collectedDate": "2025-08-08T18:11:52.565364",
+              "description": "Action Plan deployment file",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "SVC-03",
+          "description": "Encrypt all federal and sensitive information at rest",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC encrypts all customer and sensitive data at rest using a combination of customer-managed and Microsoft-managed encryption keys. All data, including that stored in databases, file storage, and backups, is protected by Azure’s built-in encryption capabilities. Customer-managed cryptographic keys are managed using Azure Key Vault to ensure strong security and strict access controls.",
+          "evidence": [
+            {
+              "id": "53639278-7a12-4f82-b656-144fd9808dcf",
+              "name": "SVC-03-blob-blobstorage encryption.png",
+              "collectedDate": "2025-08-08T18:11:52.565674",
+              "description": "Defines environment-specific values for services in IntelliGRC, ensuring that cryptographic protocols (TLS 1.2+) are consistently enforced across the infrastructure, providing end-to-end encryption and securing communications between all components.",
+              "source": "Azure Portal",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "8e5942f6-ac33-4700-89e6-21336f16dc00",
+              "name": "SVC-03-bolb-storage.tf",
+              "collectedDate": "2025-08-08T18:11:52.565735",
+              "description": "Terraform config file for Azure Blob Storage",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "SVC-04",
+          "description": "Manage configuration centrally",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC employs centralized configuration management using Infrastructure-as-Code (IaC) tools, primarily Terraform within Azure DevOps, to ensure consistent, secure, and auditable configuration deployments and changes across the production environment. Application configurations and deployments are managed through ArgoCD and helm.",
+          "evidence": [
+            {
+              "id": "39ebc5d4-b484-4e1c-8cbf-8523ecd165e0",
+              "name": "SVC-04-intelli-appset.yml.txt",
+              "collectedDate": "2025-08-08T18:11:52.565877",
+              "description": " Defines application configuration settings within the centralized configuration management system, using Infrastructure-as-Code (IaC) tools like Terraform to ensure secure and consistent deployments across the production environment.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "d8d5873c-2922-4d1a-987b-5d00662fe89f",
+              "name": "SVC-04-Pipeline Repo.png",
+              "collectedDate": "2025-08-08T18:11:52.565917",
+              "description": "Visual representation of the configuration pipeline within Azure DevOps, showing the use of Infrastructure-as-Code tools (Terraform) and ArgoCD for centralized and auditable application configuration management.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "SVC-05",
+          "description": "Enforce system and information resource integrity through cryptographic means",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC enforces system and information resource integrity through layered cryptographic controls. All data in transit is protected using strong TLS encryption, including mutual TLS (mTLS) for service-to-service communication within Kubernetes. Data at rest in databases, storage, and backups is encrypted using a combination of customer-managed and Microsoft-managed keys.\nTo protect the integrity of the application stack, deployment policies require all container images to be pulled exclusively from a trusted Azure Container Registry. Only images managed within this private registry are permitted to run within the Kubernetes environment.",
+          "evidence": [
+            {
+              "id": "1d91d7fa-0ee2-41cf-bd09-e8e461ac5f3e",
+              "name": "SVC-05-encryption on psqlfs 2.png",
+              "collectedDate": "2025-08-08T18:11:52.566008",
+              "description": "Visual representation of encryption settings for PostgreSQL file systems (psqlfs), ensuring data at rest is encrypted using a combination of customer-managed and Microsoft-managed keys.",
+              "source": "Azure Portal",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "ac04f619-1da6-460b-866e-5d88b5a9cfe0",
+              "name": "SVC-05-encryptionon psqlfs.png",
+              "collectedDate": "2025-08-08T18:11:52.566043",
+              "description": "Another visual representation showing encryption for PostgreSQL storage, confirming that data is securely encrypted both at rest and in transit using strong cryptographic controls.",
+              "source": "Azure Portal",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "db354679-ee75-4574-8974-6ac40fcd961a",
+              "name": "SVC-05-blob-storage encryption.png",
+              "collectedDate": "2025-08-08T18:11:52.566076",
+              "description": "Displays the encryption configuration for Azure Blob Storage, ensuring data at rest is encrypted using a mix of customer-managed and Microsoft-managed keys, in line with IntelliGRC’s cryptographic controls.",
+              "source": "Azure Portal",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "9e2f1e83-ef24-49f1-92fc-b8c0f8f9f3a7",
+              "name": "SVC-05-blob-storage.tf",
+              "collectedDate": "2025-08-08T18:11:52.566109",
+              "description": "Configures Azure Blob Storage with encryption for data at rest using both customer-managed and Microsoft-managed keys, ensuring the integrity and security of stored data in alignment with IntelliGRC's cryptographic controls.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "fcd80356-faf0-4666-a9e8-21fd6fbac479",
+              "name": "SVC-05-policy_assignment_fedramp_moderate.json",
+              "collectedDate": "2025-08-08T18:11:52.566142",
+              "description": "Defines policy assignments to enforce FedRAMP Moderate security controls, ensuring that only trusted container images from a private Azure Container Registry are allowed to run in the Kubernetes environment, and maintaining data integrity with encrypted data storage and transit.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "SVC-06",
+          "description": "Use automated key management systems to manage, protect, and regularly rotate digital keys and certificates",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC utilizes Azure Key Vault for centralized, automated management, protection, and regular rotation of cryptographic keys and certificates, ensuring secure lifecycle management aligned with FedRAMP and NIST requirements.",
+          "evidence": [
+            {
+              "id": "14389442-f9b9-4a6f-bafc-fffbdd238ea9",
+              "name": "SVC-06-aks-cluster.tf",
+              "collectedDate": "2025-08-08T18:11:52.566226",
+              "description": "Configures Azure Kubernetes Service (AKS) cluster settings, leveraging Azure Key Vault for centralized management, protection, and automated rotation of cryptographic keys and certificates in alignment with FedRAMP and NIST requirements.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "3584015c-1b3a-48ad-b8f0-f826a167c27c",
+              "name": "SVC-06-keyvault.tf",
+              "collectedDate": "2025-08-08T18:11:52.566261",
+              "description": " Implements the Azure Key Vault configuration to securely manage cryptographic keys and certificates, automating key lifecycle management, including regular rotations to maintain compliance with security best practices and regulatory requirements.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "SVC-07",
+          "description": "Use a consistent, risk-informed approach for applying security patches",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC applies security patches through a structured and risk-informed approach, conducting regular vulnerability assessments, prioritizing patches based on severity and impact, and verifying successful patch deployment via automated mechanisms aligned with established timeframes.",
+          "evidence": [
+            {
+              "id": "944dd1b1-1ea6-4a98-ac27-2c5bd945d41d",
+              "name": "SVC-07-Automated VM Patching.png",
+              "collectedDate": "2025-08-08T18:11:52.566330",
+              "description": "Provides a visual representation of the automated VM patching process, illustrating the risk-informed approach to security patching, vulnerability assessments, and timely deployment in accordance with security policies.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "a6600dd8-064b-496e-9f6f-2083376e85a0",
+              "name": "SVC-07-kubernetes node image scheduledupdates.png",
+              "collectedDate": "2025-08-08T18:11:52.566365",
+              "description": "Displays the scheduled update process for Kubernetes node images, ensuring security patches are applied regularly and systematically as part of IntelliGRC’s risk-informed patch management approach.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "eaa65a35-9065-44f5-bb39-c935512acbfb",
+              "name": "SVC-07-jumpbox.tf",
+              "collectedDate": "2025-08-08T18:11:52.566398",
+              "description": " Configures the security settings for the jumpbox, ensuring timely and consistent application of security patches, aligned with the structured patching approach and automated deployment verification mechanisms.",
+              "source": "Azure DevOps Repository",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        }
+      ]
+    },
+    {
+      "familyID": "TPR",
+      "familyName": "Third-Party Information Resources",
+      "controls": [
+        {
+          "id": "TPR-01",
+          "description": "Identify all third-party information resources",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC maintains a comprehensive inventory of all third-party services, applications, and components utilized within the production environment. This inventory includes clear descriptions of each resource, its purpose, and associated security characteristics, consistent with organizational configuration management and supply chain risk management policies.",
+          "evidence": [
+            {
+              "id": "72f8811f-16c4-478b-97cb-28d9f6969f98",
+              "name": "PIY-01-SSP-Appendix-M-Integrated-Inventory-Workbook.xlsx",
+              "collectedDate": "2025-08-08T18:11:52.567541",
+              "description": "FedRAMP Integrated Inventory Workbook",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "TPR-02",
+          "description": "Regularly confirm that services handling federal information or are likely to impact the confidentiality, integrity, or availability of federal information are FedRAMP authorized and securely configured",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC regularly verifies FedRAMP authorization and secure configuration of third-party cloud services and providers that handle federal information or impact IntelliGRC system security. This verification process aligns with IntelliGRC's risk assessment and security assessment policies and includes periodic review of FedRAMP packages, ATO letters, and security configurations.",
+          "evidence": [
+            {
+              "id": "5c52f693-85a3-4a00-88b9-8579601c24ae",
+              "name": "TPR-03-Azure Commercial Cloud _ FedRAMP Marketplace.png",
+              "collectedDate": "2025-08-08T18:11:52.567669",
+              "description": "Screenshot of FedRAMP Market Place",
+              "source": "External Link",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6f790876-2c59-4f71-a76e-812425601481",
+              "name": "TPR-03-Service Ticket_452_Externalsystems Authorization_Q3.pdf",
+              "collectedDate": "2025-08-08T18:11:52.567712",
+              "description": "Service Ticket",
+              "source": "ITSM",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "eb7e0624-76a3-4d15-b679-b13ef2ffd286",
+              "name": "TPR-02-IntelliGRC_Subscription-MSA_v2.8.docx",
+              "collectedDate": "2025-08-08T18:11:52.567749",
+              "description": "Application MSA",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "aea8b4d9-b4bf-421d-b5ff-d8c09f6149e4",
+              "name": "TPR-02-AzureFedRAMPSSP.pdf",
+              "collectedDate": "2025-08-08T18:11:52.567804",
+              "description": "Azure FedRAMP SSP",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "TPR-03",
+          "description": "Identify and prioritize mitigation of potential supply chain risks",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC conducts periodic supply chain risk assessments to identify and prioritize risks posed by third-party vendors, components, and services. Risk assessments are performed annually or upon significant changes, and mitigation plans are maintained and prioritized based on the criticality of the service or component, in accordance with IntelliGRC’s Supply Chain Risk Management policy.",
+          "evidence": [
+            {
+              "id": "1c1bef9d-0ec6-4ae8-a239-b57cfbf7168e",
+              "name": "PIY-07-IntelliGRC - Supply Chain Risk Management (SCRM) Plan_v1.0.pdf",
+              "collectedDate": "2025-08-08T18:11:52.567918",
+              "description": "IntelliGRC Supply Chain Risk Management Plan document.",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "d52b1be9-508d-468e-a015-75b9c04ac553",
+              "name": "PIY-07-IntelliGRC_Prod-SBOM_Summary-8.8.25.csv",
+              "collectedDate": "2025-08-08T18:11:52.567958",
+              "description": "IntelliGRC Microservices SBOM Summary List",
+              "source": "Azure DevOps CI/CD Pipeline SBOM Summary",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "eba7e048-1082-4739-ae04-533cf3124d48",
+              "name": "IntelliGRC_SBOM_Package_8.8.25.zip",
+              "collectedDate": "2025-08-08T18:11:52.567992",
+              "description": "IntelliGRC Microservices SBOM Packages",
+              "source": "Azure DevOps CI/CD Pipeline SBOM",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        },
+        {
+          "id": "TPR-04",
+          "description": "Monitor third party software information resources for upstream vulnerabilities, with contractual notification requirements or active monitoring services",
+          "implementationStatus": true,
+          "implementationStatement": "IntelliGRC actively monitors third-party software and services for upstream vulnerabilities utilizing automated vulnerability scanning, real-time security feeds, and vendor security advisories. Contractual agreements require third-party notification of vulnerabilities, and monitoring processes ensure timely remediation aligned with IntelliGRC’s vulnerability management policies.",
+          "evidence": [
+            {
+              "id": "e311e044-5c7c-4cb9-a225-acda9bfaac80",
+              "name": "TPR-04-Vulnerability Report (intelliacr.azurecr.io_actionplan_v0.31.5).pdf",
+              "collectedDate": "2025-08-08T18:11:52.568075",
+              "description": "IntelliGRC Azure Container Registry Container Image Vulnerability Scans",
+              "source": "Azure DevOps CI/CD Pipeline Grype Scan",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "42ec9b1f-1d5f-449f-ae7c-4a4503110783",
+              "name": "PIY-03-CISA Vulnerability.pdf",
+              "collectedDate": "2025-08-08T18:11:52.568113",
+              "description": "CISA Vulnerability Email Alert",
+              "source": "CISA",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "389f4ac9-fd56-44b3-8a83-56560aeabb10",
+              "name": "PIY-03-Krebs Vulnerability.pdf",
+              "collectedDate": "2025-08-08T18:11:52.568149",
+              "description": "Krebs on Security Vulnerability Email Alert",
+              "source": "Krebs on security",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
+              "id": "6e0a5153-2bf5-46ff-ab67-d2625ea769a0",
+              "name": "PIY-07-Supply Chain Risk Management Policy.docx",
+              "collectedDate": "2025-08-08T18:11:52.568182",
+              "description": "IntelliGRC Supply Chain Risk Management Policy document.",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            },
+            {
+              "id": "41c542c6-7ada-4977-ad18-2760847d0469",
+              "name": "TPR-04-System and Services Acquisition Policy.pdf",
+              "collectedDate": "2025-08-08T18:11:52.568214",
+              "description": "IntelliGRC System and Services Acquisition Policy document.",
+              "source": "IntelliGRC Governance Documents - SharePoint Online",
+              "collectionType": "MANUAL",
+              "fileType": "pdf"
+            }
+          ],
+          "auditStatus": {
+            "status": "",
+            "auditor": "",
+            "lastUpdatedTimestamp": "",
+            "auditor_validation": ""
+          }
+        }
+      ]
+    }
+  ]
+}

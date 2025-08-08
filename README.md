@@ -18,4 +18,3 @@ with a focus on accuracy, efficiency, and clear auditor collaboration.
 | --------------------------------------------------------------------------- | -------------------------------------------------- |
 | **[IntelliGRC 20x Assessment File](IntelliGRC_20X_Assessment_Public.json)** | Public version of the assessment package           |
 | **[IntelliGRC 20x Schema](IntelliGRC_20x_Schema.json)**                     | JSON schema describing the assessment data format  |
-| **[Report Template](report_template.html)**                                  | HTML report that renders the assessment JSON for interactive viewing |

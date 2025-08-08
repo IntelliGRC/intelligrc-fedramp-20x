@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FedRAMP Assessment Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 3px solid #0078d4;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #0078d4;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .metadata-section {
+            background: linear-gradient(135deg, #0078d4, #106ebe);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .metadata-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .metadata-item h4 {
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .metadata-item p {
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            border-left: 4px solid #0078d4;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #0078d4;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .families-section {
+            margin-bottom: 40px;
+        }
+
+        .family-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .family-header {
+            background: linear-gradient(135deg, #0078d4, #106ebe);
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .family-header:hover {
+            background: linear-gradient(135deg, #106ebe, #005a9e);
+        }
+
+        .family-header h3 {
+            margin: 0;
+            font-size: 1.3em;
+        }
+
+        .family-header .family-id {
+            opacity: 0.8;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .family-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .family-content.expanded {
+            max-height: none;
+            padding: 20px;
+        }
+
+        .control-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .control-header {
+            background: #f8f9fa;
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .control-header:hover {
+            background: #e9ecef;
+        }
+
+        .control-header h4 {
+            color: #0078d4;
+            margin-bottom: 5px;
+        }
+
+        .control-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-compliant {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-partial {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-non-compliant {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .control-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .control-content.expanded {
+            max-height: none;
+            padding: 20px;
+        }
+
+        .implementation-statement {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0078d4;
+        }
+
+        .evidence-section {
+            margin-top: 15px;
+        }
+
+        .evidence-section h5 {
+            color: #0078d4;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+
+        .evidence-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .evidence-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .evidence-name {
+            font-weight: bold;
+            color: #0078d4;
+        }
+
+        .evidence-type {
+            background: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            color: #495057;
+        }
+
+        .evidence-description {
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .evidence-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            font-size: 0.85em;
+            color: #888;
+        }
+
+        .evidence-meta span {
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 3px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+            color: #666;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .metadata-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .summary-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FedRAMP Assessment Report</h1>
+            <div class="subtitle">Compliance Implementation Details</div>
+        </div>
+
+        <div id="loading" class="loading">
+            Loading report data...
+        </div>
+
+        <div id="report-content" style="display: none;">
+            <!-- Metadata Section -->
+            <div class="metadata-section">
+                <h2>Assessment Information</h2>
+                <div class="metadata-grid" id="metadata-grid">
+                    <!-- Metadata will be populated here -->
+                </div>
+            </div>
+
+            <!-- Summary Statistics -->
+            <div class="summary-stats" id="summary-stats">
+                <!-- Summary stats will be populated here -->
+            </div>
+
+            <!-- Families Section -->
+            <div class="families-section" id="families-section">
+                <!-- Families will be populated here -->
+            </div>
+
+            <div class="footer">
+                <p>Report generated on <span id="generation-date"></span></p>
+                <p>FedRAMP Assessment Report - IntelliGRC Implementation Details</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load and process the JSON data
+        async function loadReportData() {
+            try {
+                const response = await fetch('IntelliGRC_20X_Assessment_Public.json');
+                const data = await response.json();
+                generateReport(data);
+            } catch (error) {
+                console.error('Error loading report data:', error);
+                document.getElementById('loading').innerHTML = 'Error loading report data. Please ensure the JSON file is available.';
+            }
+        }
+
+        function generateReport(data) {
+            // Hide loading, show content
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('report-content').style.display = 'block';
+
+            // Populate metadata
+            populateMetadata(data.metadata);
+
+            // Generate summary statistics
+            generateSummaryStats(data);
+
+            // Generate families section
+            generateFamiliesSection(data.families);
+
+            // Set generation date
+            document.getElementById('generation-date').textContent = new Date().toLocaleDateString();
+        }
+
+        function populateMetadata(metadata) {
+            const metadataGrid = document.getElementById('metadata-grid');
+            const metadataItems = [
+                { label: 'Framework', value: 'FedRAMP' },
+                { label: 'Provider Name', value: metadata.cloudServiceProviderInformation?.providerName || 'N/A' },
+                { label: 'Service Offering', value: metadata.cloudServiceProviderInformation?.serviceOffering || 'N/A' },
+                { label: 'Deployment Environment', value: metadata.cloudServiceProviderInformation?.deploymentEnvironment || 'N/A' },
+                { label: 'Submission Date', value: metadata.submissionDate || 'N/A' },
+                { label: 'Version', value: metadata.submissionVersion || 'N/A' }
+            ];
+
+            metadataGrid.innerHTML = metadataItems.map(item => `
+                <div class="metadata-item">
+                    <h4>${item.label}</h4>
+                    <p>${item.value}</p>
+                </div>
+            `).join('');
+        }
+
+        function generateSummaryStats(data) {
+            const summaryStats = document.getElementById('summary-stats');
+            
+            // Calculate statistics
+            const totalFamilies = data.families?.length || 0;
+            const totalControls = data.families?.reduce((sum, family) => sum + (family.controls?.length || 0), 0) || 0;
+            const totalEvidence = data.families?.reduce((sum, family) => 
+                sum + (family.controls?.reduce((controlSum, control) => 
+                    controlSum + (control.evidence?.length || 0), 0) || 0), 0) || 0;
+            
+            const compliantControls = data.families?.reduce((sum, family) => 
+                sum + (family.controls?.filter(control => control.implementationStatus).length || 0), 0) || 0;
+
+            const stats = [
+                { number: totalFamilies, label: 'Control Families' },
+                { number: totalControls, label: 'Total Controls' },
+                { number: compliantControls, label: 'Compliant Controls' },
+                { number: totalEvidence, label: 'Evidence Items' }
+            ];
+
+            summaryStats.innerHTML = stats.map(stat => `
+                <div class="stat-card">
+                    <div class="stat-number">${stat.number}</div>
+                    <div class="stat-label">${stat.label}</div>
+                </div>
+            `).join('');
+        }
+
+        function generateFamiliesSection(families) {
+            const familiesSection = document.getElementById('families-section');
+            
+            if (!families || families.length === 0) {
+                familiesSection.innerHTML = '<p>No families data available.</p>';
+                return;
+            }
+
+            familiesSection.innerHTML = families.map(family => `
+                <div class="family-card">
+                    <div class="family-header" onclick="toggleFamily(this)">
+                        <h3>${family.familyName}</h3>
+                        <div class="family-id">Family ID: ${family.familyID}</div>
+                    </div>
+                    <div class="family-content">
+                        ${generateControlsHTML(family.controls)}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function generateControlsHTML(controls) {
+            if (!controls || controls.length === 0) {
+                return '<p>No controls available for this family.</p>';
+            }
+
+            return controls.map(control => `
+                <div class="control-item">
+                    <div class="control-header" onclick="toggleControl(this)">
+                        <h4>${control.id} - ${control.description}</h4>
+                        <span class="control-status ${getStatusClass(control.implementationStatus)}">
+                            ${getStatusText(control.implementationStatus)}
+                        </span>
+                    </div>
+                    <div class="control-content">
+                        ${control.implementationStatement ? `
+                            <div class="implementation-statement">
+                                <strong>Implementation Statement:</strong><br>
+                                ${control.implementationStatement}
+                            </div>
+                        ` : ''}
+                        
+                        ${control.evidence && control.evidence.length > 0 ? `
+                            <div class="evidence-section">
+                                <h5>Evidence (${control.evidence.length} items)</h5>
+                                ${control.evidence.map(evidence => `
+                                    <div class="evidence-item">
+                                        <div class="evidence-header">
+                                            <span class="evidence-name">${evidence.name || evidence.id}</span>
+                                            <span class="evidence-type">${evidence.collectionType || 'MANUAL'}</span>
+                                        </div>
+                                        <div class="evidence-description">${evidence.description || 'No description available'}</div>
+                                        <div class="evidence-meta">
+                                            <span><strong>Source:</strong> ${evidence.source || 'N/A'}</span>
+                                            <span><strong>Type:</strong> ${evidence.fileType || 'N/A'}</span>
+                                            <span><strong>Collected:</strong> ${formatDate(evidence.collectedDate)}</span>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        ` : '<p>No evidence available for this control.</p>'}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getStatusClass(status) {
+            if (status === true || status === 'COMPLIANT') return 'status-compliant';
+            if (status === 'PARTIAL') return 'status-partial';
+            return 'status-non-compliant';
+        }
+
+        function getStatusText(status) {
+            if (status === true || status === 'COMPLIANT') return 'Compliant';
+            if (status === 'PARTIAL') return 'Partial';
+            return 'Non-Compliant';
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            try {
+                return new Date(dateString).toLocaleDateString();
+            } catch {
+                return dateString;
+            }
+        }
+
+        function toggleFamily(element) {
+            const content = element.nextElementSibling;
+            content.classList.toggle('expanded');
+        }
+
+        function toggleControl(element) {
+            const content = element.nextElementSibling;
+            content.classList.toggle('expanded');
+        }
+
+        // Load the report when the page loads
+        document.addEventListener('DOMContentLoaded', loadReportData);
+    </script>
+</body>
+</html>

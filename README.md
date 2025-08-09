@@ -1,4 +1,4 @@
-IntelliGRC is stoked about our submission for the **FedRAMP 20x Phase One** pilot. 
+IntelliGRC is ecstatic about our submission for the **FedRAMP 20x Phase One** pilot! 
 This submission is meant to reflect our dedication to supporting our vision 
 for faster, more transparent, and scalable cybersecurity compliance.
 

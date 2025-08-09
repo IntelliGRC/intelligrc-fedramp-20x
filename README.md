@@ -1,3 +1,9 @@
+
+<img width="864" height="327" alt="IntelliGRC_StandardLogoMargin" src="https://github.com/user-attachments/assets/fac97dd6-f60b-499d-a9e3-9ae9002b69a8" />
+
+
+
+
 IntelliGRC is ecstatic about our submission for the **FedRAMP 20x Phase One** pilot! 
 This submission is meant to reflect our dedication to supporting our vision 
 for faster, more transparent, and scalable cybersecurity compliance.

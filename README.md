@@ -12,9 +12,9 @@ for faster, more transparent, and scalable cybersecurity compliance.
 
 # About IntelliGRC
 
-**IntelliGRC** is a cloud‑based compliance management platform enhanced with AI‑driven capabilities. 
-We help organizations manage the full compliance lifecycle—from preparation through continuous monitoring—
-with a focus on accuracy, efficiency, and clear auditor collaboration.
+**IntelliGRC** is an AI-powered, multi-tenant Cybersecurity GRC platform that helps service providers and regulated enterprises achieve and maintain audit-readiness at scale—
+boosting profitability, streamlining compliance, and ensuring regulatory excellence.
+
 
 ---
 

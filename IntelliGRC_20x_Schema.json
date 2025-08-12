@@ -3,29 +3,27 @@
   "metadata": {
     "hash": {
       "algorithm": "string - algorithm used for hashing",
-      "value": "string - hash value of the controls in the document"
+      "value": "string - hash value of the families, controls, and evidence in the document"
     },
     "cloudServiceProviderInformation": {
-      "providerName": "IntelliGRC, Inc.",
-      "providerDescription": "IntelliGRC is a multi-tenant SaaS Cybersecurity Governance, Risk Management, and Compliance (GRC) platform purpose-built to catalyze unparalleled cybersecurity compliance at scale for service providers and regulated enterprises—Transforming audit-readiness, supercharging provider profitability, and optimizing regulatory excellence.",
-      "serviceOffering": "IntelliGRC",
-      "deploymentEnvironment": "Azure Commercial US-EAST, US-WEST",
-      "submissionDate": "08/08/2025",
-      "submissionVersion": "1.0"
+      "providerName": "string - name of the cloud service provider",
+      "providerDescription": "string - description of the cloud service provider",
+      "serviceOffering": "string - name of the service offering",
+      "deploymentEnvironment": "string - cloud environment in which the service is hosted"
     },
-    "submissionDate": "date - date of submission in YYYY-MM-DD format",
+    "submissionDate": "date - date of submission in YYYY/MM/DD format",
     "submissionVersion": "string - version of the submission"
   },
   "families": [
     {
-      "familyID": "string - unique ID of the control family",
-      "familyName": "string - name of the control family",
+      "familyID": "string - unique ID of the KSI control family",
+      "familyName": "string - name of the KSI control family",
       "controls": [
         {
-          "id": "string - unique ID of the control",
-          "description": "string - Description of the control",          
+          "id": "string - unique ID of the KSI control",
+          "description": "string - Description of the KSI control",
           "implementationStatus": "true or false - whether the control is implemented",
-          "implementationStatement": "string - implementation statement of the control",          
+          "implementationStatement": "string - implementation statement of the control",
           "evidence": [
             {
               "id": "guid - unique id for evidence",
@@ -33,7 +31,7 @@
               "collectedDate": "dateTime - date the evidence was collected",
               "description": "string - description of the evidence",
               "source": "string - source of the evidence",
-              "collectionType": "string - how the evidence was collected. Can be AUTOMATED or MANUAL",              
+              "collectionType": "string - how the evidence was collected. Can be AUTOMATED or MANUAL",
               "fileType": "string - filetype of evidence, file extension"
             }
           ],

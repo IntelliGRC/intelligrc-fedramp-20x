@@ -2953,15 +2953,6 @@
               "fileType": "pdf"
             },
             {
-              "id": "13a868d1-a011-4e49-8603-3aaa46f8948f",
-              "name": "TPR-02-IntelliGRC_Subscription-MSA_v2.8.docx",
-              "description": "Application MSA",
-              "collectedDate": "2025-08-12T22:27:12.858Z",
-              "source": "IntelliGRC Governance Documents - SharePoint Online",
-              "collectionType": "MANUAL",
-              "fileType": "docx"
-            },
-            {
               "id": "89be1220-5b9c-4c39-a727-3b549ba6b9a4",
               "name": "TPR-02-AzureFedRAMPSSP.pdf",
               "description": "Azure FedRAMP SSP",

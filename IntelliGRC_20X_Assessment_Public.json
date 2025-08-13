@@ -1,10 +1,6 @@
 {
   "framework": "FedRAMP 20x",
   "metadata": {
-    "hash": {
-      "algorithm": "SHA-256",
-      "value": "5c7fbdae14af391128da772d0b710ebedfff50cab23daa9c7fe5d5a57b78c8c9"
-    },
     "cloudServiceProviderInformation": {
       "providerName": "IntelliGRC, Inc.",
       "serviceOffering": "IntelliGRC",

@@ -1,10 +1,6 @@
 {
   "framework": "string",
   "metadata": {
-    "hash": {
-      "algorithm": "string - algorithm used for hashing",
-      "value": "string - hash value of the families, controls, and evidence in the document"
-    },
     "cloudServiceProviderInformation": {
       "providerName": "string - name of the cloud service provider",
       "providerDescription": "string - description of the cloud service provider",

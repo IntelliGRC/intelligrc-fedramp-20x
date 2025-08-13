@@ -7,8 +7,8 @@
       "deploymentEnvironment": "Azure Commercial US-EAST, US-WEST",
       "providerDescription": "IntelliGRC is a multi-tenant SaaS Cybersecurity Governance, Risk Management, and Compliance (GRC) platform purpose-built to catalyze unparalleled cybersecurity compliance at scale for service providers and regulated enterprises—Transforming audit-readiness, supercharging provider profitability, and optimizing regulatory excellence."
     },
-    "submissionDate": "2025/08/12",
-    "submissionVersion": "1.1"
+    "submissionDate": "2025/08/13",
+    "submissionVersion": "1.2"
   },
   "families": [
     {
@@ -67,13 +67,13 @@
               "fileType": "csv"
             },
             {
-              "id": "c57dbed9-c2a0-4ea5-963d-807277fe8955",
-              "name": "CED-01-Annual Security and Awareness Training v2025-08.csv",
+              "id": "3117a7a2-517c-488b-a2f9-66ec1e13c055",
+              "name": "CED-01-AnnualSecurityTrainingv2025-08_CompletionRecordsWithUserRoleAssignments.xlsm",
               "description": "Training report",
-              "collectedDate": "2025-08-12T22:27:12.857Z",
+              "collectedDate": "2025-08-13T21:21:07.020Z",
               "source": "M365 Defender Admin portal",
               "collectionType": "AUTOMATED",
-              "fileType": "csv"
+              "fileType": "xlsm"
             }
           ],
           "auditStatus": {
@@ -99,13 +99,13 @@
               "fileType": "png"
             },
             {
-              "id": "700a6cd0-1f53-4fed-9896-e528577bf8f5",
-              "name": "CED-01-Annual Security and Awareness Training v2025-08.csv",
+              "id": "b2aae6f9-90b0-4046-a524-8acecdbda461",
+              "name": "CED-01-AnnualSecurityTrainingv2025-08_CompletionRecordsWithUserRoleAssignments.xlsm",
               "description": "Screenshot of training requirements for users with elevated privileges",
-              "collectedDate": "2025-08-12T22:27:12.857Z",
+              "collectedDate": "2025-08-13T21:21:07.020Z",
               "source": "M365 Defender Admin portal",
               "collectionType": "AUTOMATED",
-              "fileType": "csv"
+              "fileType": "xlsm"
             },
             {
               "id": "5e9b0c52-3d04-4b3f-9a2d-f6e08f3314df",
@@ -402,10 +402,10 @@
               "fileType": "tf"
             },
             {
-              "id": "805512e4-287e-480d-9e9b-dd2b28c867c9",
-              "name": "CNA-01-jumpbox-nw.tf",
+              "id": "b22e1b1b-c2bc-41fc-ac13-61818877a8da",
+              "name": "CNA-01_CNA-03-jumpbox-nw.tf",
               "description": " Defines network settings for the jumpbox, including the enforcement of NSGs and private access management to ensure secure administrative operations.",
-              "collectedDate": "2025-08-12T22:27:12.857Z",
+              "collectedDate": "2025-08-13T21:21:07.020Z",
               "source": "Azure DevOps Repository",
               "collectionType": "AUTOMATED",
               "fileType": "tf"
@@ -574,10 +574,10 @@
               "fileType": "tf"
             },
             {
-              "id": "39da843d-7bf8-486c-a765-2be41ea76d00",
-              "name": "CNA-03-jumpbox-nw.tf",
+              "id": "9f8a68b0-5f57-4b97-b284-c434d005e6ac",
+              "name": "CNA-01_CNA-03-jumpbox-nw.tf",
               "description": " Configures network segmentation for the jumpbox, enforcing security policies that prevent lateral movement while restricting traffic to only essential connections.",
-              "collectedDate": "2025-08-12T22:27:12.857Z",
+              "collectedDate": "2025-08-13T21:21:07.020Z",
               "source": "Azure DevOps Repository",
               "collectionType": "AUTOMATED",
               "fileType": "tf"
@@ -585,7 +585,7 @@
             {
               "id": "aba5f0f0-af53-4a60-a50b-979953bfe2c5",
               "name": "CNA-03-openai.tf",
-              "description": "Configures secure communication for OpenAI integration, ensuring it adheres to network segmentation and access control policies enforced via Azure’s managed firewall and NSGs.",
+              "description": "Configures secure communication for OpenAI integration, ensuring it adheres to network segmentation and access control policies enforced via Azure\u00e2\u20ac\u2122s managed firewall and NSGs.",
               "collectedDate": "2025-08-12T22:27:12.857Z",
               "source": "Azure DevOps Repository",
               "collectionType": "AUTOMATED",
@@ -710,13 +710,13 @@
               "fileType": "tf"
             },
             {
-              "id": "bf8289db-2c06-481d-bfce-aad65cf253c3",
-              "name": "CNA-05-azure-frontdoor.pdf",
+              "id": "54cd8fd5-a5ec-4ba6-8e89-d516a81141ff",
+              "name": "KSI-CNA-05-Azure-front-door.tf",
               "description": "Microsoft's Azure Front Door documentation",
-              "collectedDate": "2025-08-12T22:27:12.857Z",
+              "collectedDate": "2025-08-13T21:21:07.020Z",
               "source": "Microsoft Learn",
               "collectionType": "MANUAL",
-              "fileType": "pdf"
+              "fileType": "tf"
             },
             {
               "id": "2bd4af3c-31b8-43a4-9c50-fadcfb6789b4",
@@ -857,7 +857,7 @@
             {
               "id": "4627a9d5-eea9-404b-9968-d8d2df6d6564",
               "name": "CNA-7_IntelliGRC_Azure_Well-Architected-Framework.tf",
-              "description": "Configures IntelliGRC’s infrastructure to align with the Azure Well-Architected Framework, ensuring that resources are deployed following best practices for reliability, security, cost management, and operational excellence.",
+              "description": "Configures IntelliGRC\u00e2\u20ac\u2122s infrastructure to align with the Azure Well-Architected Framework, ensuring that resources are deployed following best practices for reliability, security, cost management, and operational excellence.",
               "collectedDate": "2025-08-12T22:27:12.857Z",
               "source": "Internal documentation, Azure Devops Repository",
               "collectionType": "AUTOMATED",
@@ -1022,7 +1022,7 @@
           "id": "IAM-04",
           "description": "Use a least-privileged, role and attribute-based, and just-in-time security authorization model for all user and non-user accounts and services",
           "implementationStatus": true,
-          "implementationStatement": "IntelliGRC applies a role-based access control (RBAC) model using Azure Entra ID Privileged Identity Management (PIM) and just-in-time (JIT) access controls, strictly enforcing least privilege access. User and non-user accounts are regularly reviewed and privileges adjusted accordingly in alignment with IntelliGRC’s Access Control Policy.",
+          "implementationStatement": "IntelliGRC applies a role-based access control (RBAC) model using Azure Entra ID Privileged Identity Management (PIM) and just-in-time (JIT) access controls, strictly enforcing least privilege access. User and non-user accounts are regularly reviewed and privileges adjusted accordingly in alignment with IntelliGRC\u00e2\u20ac\u2122s Access Control Policy.",
           "evidence": [
             {
               "id": "507a9c63-5795-4f88-8734-4eff5c6039c9",
@@ -1063,7 +1063,7 @@
           "id": "IAM-05",
           "description": "Apply zero trust design principles",
           "implementationStatus": true,
-          "implementationStatement": "IntelliGRC employs zero trust principles by enforcing continuous authentication, least privilege, strict segmentation, device verification, and conditional access policies through Azure Entra ID Conditional Access and MS Sentinel security monitoring, as documented in IntelliGRC’s System and Communications Protection and Access Control Policies.",
+          "implementationStatement": "IntelliGRC employs zero trust principles by enforcing continuous authentication, least privilege, strict segmentation, device verification, and conditional access policies through Azure Entra ID Conditional Access and MS Sentinel security monitoring, as documented in IntelliGRC\u00e2\u20ac\u2122s System and Communications Protection and Access Control Policies.",
           "evidence": [
             {
               "id": "ca60ad92-1680-486d-b374-df0a481ed65c",
@@ -1086,7 +1086,7 @@
             {
               "id": "01d29513-5f92-4029-9cfa-76aa2d196b25",
               "name": "IAM-05 Entra ID Conditional Access - Require compliant devices to access FedRAMP boundary.json",
-              "description": "Entra ID Conditional Access policy enforcing access to the FedRAMP boundary only from company-owned, Azure AD–joined, compliant Windows devices with MFA.",
+              "description": "Entra ID Conditional Access policy enforcing access to the FedRAMP boundary only from company-owned, Azure AD\u00e2\u20ac\u201cjoined, compliant Windows devices with MFA.",
               "collectedDate": "2025-08-12T22:27:12.857Z",
               "source": "MS Entra ID Conditional Access",
               "collectionType": "AUTOMATED",
@@ -1627,7 +1627,7 @@
           "id": "MLA-02",
           "description": "Regularly review and audit logs",
           "implementationStatus": true,
-          "implementationStatement": "Log data collected by IntelliGRC’s SIEM is actively reviewed by the Security Team to detect indicators of compromise, unauthorized use, anomalous patterns, and system misuse. Reviews are performed routinely, with elevated scrutiny applied during high-risk periods or after incidents. The Security Team is responsible for analyzing event and anomaly data and correlating that information across systems for impact assessment. Quarterly summaries of key events, anomalies, and findings are delivered to the CISO and System Owner, supporting visibility into operational risk and policy compliance.",
+          "implementationStatement": "Log data collected by IntelliGRC\u00e2\u20ac\u2122s SIEM is actively reviewed by the Security Team to detect indicators of compromise, unauthorized use, anomalous patterns, and system misuse. Reviews are performed routinely, with elevated scrutiny applied during high-risk periods or after incidents. The Security Team is responsible for analyzing event and anomaly data and correlating that information across systems for impact assessment. Quarterly summaries of key events, anomalies, and findings are delivered to the CISO and System Owner, supporting visibility into operational risk and policy compliance.",
           "evidence": [
             {
               "id": "885704fe-66d6-4076-b93b-9b4251cb0564",
@@ -1707,6 +1707,15 @@
               "fileType": "pdf"
             },
             {
+              "id": "33d098fd-08c1-4b20-a08a-1049b899ff0e",
+              "name": "KSI-MLA-03-GrypeContainerVulnScanResults.pdf",
+              "description": "Grype container vuln scan report.",
+              "collectedDate": "2025-08-13T21:21:07.020Z",
+              "source": "Azure DevOps Pipelines",
+              "collectionType": "AUTOMATED",
+              "fileType": "pdf"
+            },
+            {
               "id": "2b946821-6fb0-493d-ab51-0a1f52ef398e",
               "name": "MLA-03-Vulnerability Remediation Timeline.png",
               "description": "Screenshot of Systems and Information Integrity Procedures",
@@ -1725,10 +1734,10 @@
               "fileType": "png"
             },
             {
-              "id": "ac8516ba-76ca-4666-8106-ec2169fbaf1d",
-              "name": "PIY-04-Vulnerabilities.png",
+              "id": "5bd63f63-41e5-4cc1-b61b-ad2894cb3232",
+              "name": "KSI-MLA-03-DefenderForCloud_VulnTracking.png",
               "description": "Screenshot of Microsoft Defender for Cloud dashboard listing vulnerabilities.",
-              "collectedDate": "2025-08-12T22:27:12.857Z",
+              "collectedDate": "2025-08-13T21:21:07.020Z",
               "source": "Azure DevOps Repository",
               "collectionType": "MANUAL",
               "fileType": "png"
@@ -1777,7 +1786,7 @@
             {
               "id": "f475624c-cf52-44c1-9988-bde1087d159a",
               "name": "MLA-04-red_team_exercise_report.json",
-              "description": "Report of a FedRAMP planning red team assessment on IntelliGRC’s development environment, confirming strong authentication, authorization, and input validation controls, with no significant vulnerabilities found and all tested FedRAMP controls passed.",
+              "description": "Report of a FedRAMP planning red team assessment on IntelliGRC\u00e2\u20ac\u2122s development environment, confirming strong authentication, authorization, and input validation controls, with no significant vulnerabilities found and all tested FedRAMP controls passed.",
               "collectedDate": "2025-08-12T22:27:12.857Z",
               "source": "IntelliGRC Governance Documents - SharePoint Online",
               "collectionType": "MANUAL",
@@ -2232,7 +2241,7 @@
           "id": "PIY-06",
           "description": "Have a dedicated staff and budget for security with executive support, commensurate with the size, complexity, scope, and risk of the service offering",
           "implementationStatus": true,
-          "implementationStatement": "IntelliGRC allocates dedicated security staff, assigns key roles, and plans for security-specific funding in accordance with its system and services acquisition process. The System Owner defines and documents the required security and privacy resources, the CISO ensures funding is allocated during the organization’s capital planning and investment cycles,\r\nand budgeting includes dedicated security line items and personnel to support the size and complexity of IntelliGRC’s FedRAMP Moderate SaaS offering.\r\nThese resourcing commitments are documented, reviewed, and approved by executive leadership as part of ongoing security governance.",
+          "implementationStatement": "IntelliGRC allocates dedicated security staff, assigns key roles, and plans for security-specific funding in accordance with its system and services acquisition process. The System Owner defines and documents the required security and privacy resources, the CISO ensures funding is allocated during the organization\u00e2\u20ac\u2122s capital planning and investment cycles,\r\nand budgeting includes dedicated security line items and personnel to support the size and complexity of IntelliGRC\u00e2\u20ac\u2122s FedRAMP Moderate SaaS offering.\r\nThese resourcing commitments are documented, reviewed, and approved by executive leadership as part of ongoing security governance.",
           "evidence": [
             {
               "id": "054fa379-5e99-42c1-918e-497847745f35",
@@ -2384,7 +2393,7 @@
           "id": "RPL-03",
           "description": "Perform system backups aligned with recovery objectives",
           "implementationStatus": true,
-          "implementationStatement": "System and user-level data backups are performed by the CloudOps Team using Azure’s geo-redundant storage capabilities. Backups are configured to occur at a frequency that meets or exceeds RPO requirements—typically, daily incremental and weekly full backups. System documentation and configurations are also backed up and protected using Azure RBAC and encryption-at-rest. Backup operations are monitored, and access to backup data is restricted via access controls and cryptographic safeguards.",
+          "implementationStatement": "System and user-level data backups are performed by the CloudOps Team using Azure\u00e2\u20ac\u2122s geo-redundant storage capabilities. Backups are configured to occur at a frequency that meets or exceeds RPO requirements\u00e2\u20ac\u201dtypically, daily incremental and weekly full backups. System documentation and configurations are also backed up and protected using Azure RBAC and encryption-at-rest. Backup operations are monitored, and access to backup data is restricted via access controls and cryptographic safeguards.",
           "evidence": [
             {
               "id": "0128842f-3f8f-48e0-bba2-77410e55bad2",
@@ -2662,7 +2671,7 @@
           "id": "SVC-03",
           "description": "Encrypt all federal and sensitive information at rest",
           "implementationStatus": true,
-          "implementationStatement": "IntelliGRC encrypts all customer and sensitive data at rest using a combination of customer-managed and Microsoft-managed encryption keys. All data, including that stored in databases, file storage, and backups, is protected by Azure’s built-in encryption capabilities. Customer-managed cryptographic keys are managed using Azure Key Vault to ensure strong security and strict access controls.",
+          "implementationStatement": "IntelliGRC encrypts all customer and sensitive data at rest using a combination of customer-managed and Microsoft-managed encryption keys. All data, including that stored in databases, file storage, and backups, is protected by Azure\u00e2\u20ac\u2122s built-in encryption capabilities. Customer-managed cryptographic keys are managed using Azure Key Vault to ensure strong security and strict access controls.",
           "evidence": [
             {
               "id": "da58642c-5558-4f19-9a02-c77c91cfcf80",
@@ -2776,7 +2785,7 @@
             {
               "id": "79159692-348e-404e-8294-ad5c303b0d0d",
               "name": "SVC-05-blob-storage encryption.png",
-              "description": "Displays the encryption configuration for Azure Blob Storage, ensuring data at rest is encrypted using a mix of customer-managed and Microsoft-managed keys, in line with IntelliGRC’s cryptographic controls.",
+              "description": "Displays the encryption configuration for Azure Blob Storage, ensuring data at rest is encrypted using a mix of customer-managed and Microsoft-managed keys, in line with IntelliGRC\u00e2\u20ac\u2122s cryptographic controls.",
               "collectedDate": "2025-08-12T22:27:12.857Z",
               "source": "Azure Portal",
               "collectionType": "MANUAL",
@@ -2876,7 +2885,7 @@
             {
               "id": "c2adb567-6526-406d-a8c5-747dd91da3a0",
               "name": "SVC-07-kubernetes node image scheduledupdates.png",
-              "description": "Displays the scheduled update process for Kubernetes node images, ensuring security patches are applied regularly and systematically as part of IntelliGRC’s risk-informed patch management approach.",
+              "description": "Displays the scheduled update process for Kubernetes node images, ensuring security patches are applied regularly and systematically as part of IntelliGRC\u00e2\u20ac\u2122s risk-informed patch management approach.",
               "collectedDate": "2025-08-12T22:27:12.858Z",
               "source": "Azure DevOps Repository",
               "collectionType": "MANUAL",
@@ -2973,7 +2982,7 @@
           "id": "TPR-03",
           "description": "Identify and prioritize mitigation of potential supply chain risks",
           "implementationStatus": true,
-          "implementationStatement": "IntelliGRC conducts periodic supply chain risk assessments to identify and prioritize risks posed by third-party vendors, components, and services. Risk assessments are performed annually or upon significant changes, and mitigation plans are maintained and prioritized based on the criticality of the service or component, in accordance with IntelliGRC’s Supply Chain Risk Management policy.",
+          "implementationStatement": "IntelliGRC conducts periodic supply chain risk assessments to identify and prioritize risks posed by third-party vendors, components, and services. Risk assessments are performed annually or upon significant changes, and mitigation plans are maintained and prioritized based on the criticality of the service or component, in accordance with IntelliGRC\u00e2\u20ac\u2122s Supply Chain Risk Management policy.",
           "evidence": [
             {
               "id": "df48370b-85f3-4ce5-bf21-428bea2114c3",
@@ -3014,7 +3023,7 @@
           "id": "TPR-04",
           "description": "Monitor third party software information resources for upstream vulnerabilities, with contractual notification requirements or active monitoring services",
           "implementationStatus": true,
-          "implementationStatement": "IntelliGRC actively monitors third-party software and services for upstream vulnerabilities utilizing automated vulnerability scanning, real-time security feeds, and vendor security advisories. Contractual agreements require third-party notification of vulnerabilities, and monitoring processes ensure timely remediation aligned with IntelliGRC’s vulnerability management policies.",
+          "implementationStatement": "IntelliGRC actively monitors third-party software and services for upstream vulnerabilities utilizing automated vulnerability scanning, real-time security feeds, and vendor security advisories. Contractual agreements require third-party notification of vulnerabilities, and monitoring processes ensure timely remediation aligned with IntelliGRC\u00e2\u20ac\u2122s vulnerability management policies.",
           "evidence": [
             {
               "id": "19d7444d-4e89-4a0e-a13a-c599ba923daf",
